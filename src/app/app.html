@@ -1,0 +1,24 @@
+<ion-menu [content]="mycontent">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>
+                <div style="width : 100%" class="avarta">
+                    <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? 'no-avartar.png' : user.avartar}}">
+                    <span style="display : inline-block;float : right;">{{user.name == null ? 'Không xác định' : user.name}}</span>
+                </div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose (click)="openPage('profile')">Profile</button>
+        </ion-list>
+        <ion-list>
+            <button ion-item menuClose (click)="openPage('chat')">Chat</button>
+        </ion-list>
+        <ion-list>
+            <button ion-item menuClose (click)="openPage('logout')">Logout</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>

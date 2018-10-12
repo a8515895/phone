@@ -1,0 +1,70 @@
+.message{
+    margin : 5px 0;
+}
+.message .content{
+    padding : 10px; 
+    padding : 5px;
+    margin-top : 10px;
+    margin-left : 10px;
+    max-width: 80%;
+}
+.message.receive .avarta{
+    float : left;
+}
+.message.receive .content{
+    background : #4522ec;
+    float : left;
+    border-radius : 4px 4px 4px 0
+}
+.message .content>span{
+    color: #fff
+}
+.message.reply .avarta{
+    float : right;
+}
+.message.reply .content{
+    background : #16f827;
+    float : right;
+    border-radius : 4px 0 4px 4px;
+}
+.message .avarta{
+    width: 50px;
+    padding : 5px
+}
+
+.avartar>img{
+    height : 40px;
+    width : 40px;
+    border-radius : 100%
+}
+.iconAcitveFB{
+    position : absolute;
+    right: 0;    
+    bottom: 0;
+    border-radius: 50%; 
+    display: none;
+    width: 12px; 
+    height: 12px; 
+    margin-left: 4px; 
+    display: inline-block;
+}
+.messageNotSeen{
+    position : absolute;
+    right: 0;    
+    top: 0;
+    border-radius: 50%; 
+    background: #cccccc;
+    width: 12px; 
+    height: 12px; 
+    margin-left: 4px; 
+    display: inline-block;
+    background: #e85757;
+    font-size: 9px;
+    font-weight: bold;
+    color : #ffffff;
+    text-align: center;
+}
+.iconAcitveFB.active{
+    display: block;
+    background: rgb(66, 183, 42);
+}

@@ -1,0 +1,19 @@
+<div style="padding-top : 50px;background: url(assets/imgs/bg.png) no-repeat fixed;background-size: cover;height: 100%;width : 100%">
+    <div style="background: #fff;border : 1px solid #ccc;border-radius : 4px;height : 450px;width : 250px;margin : auto">
+        <form (ngSubmit)="onSubmit($event)" #form="ngForm">
+            <ion-list>
+                <ion-item>
+                    <ion-label floating>Username</ion-label>
+                    <ion-input type="text" name="username" [(ngModel)]="model.username" #username="ngModel"></ion-input>
+                </ion-item>          
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input type="password" name="password" [(ngModel)]="model.password" #password="ngModel"></ion-input>
+                </ion-item>          
+            </ion-list>
+            <div padding>
+                <button type="submit" block>Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>
