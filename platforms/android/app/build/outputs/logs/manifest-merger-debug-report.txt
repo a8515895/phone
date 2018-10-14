@@ -15,7 +15,7 @@ ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\e6c98c60a62b3314205f30d0c2b6404d\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\a004a95464e14a813ee1d57f7ea8b0bf\AndroidManifest.xml:17:1-27:12
 MERGED from [:CordovaLib] C:\xampp\htdocs\phone\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
@@ -56,8 +56,8 @@ ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.
 		ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 application
 ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:5:5-15:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\e6c98c60a62b3314205f30d0c2b6404d\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\e6c98c60a62b3314205f30d0c2b6404d\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\a004a95464e14a813ee1d57f7ea8b0bf\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\a004a95464e14a813ee1d57f7ea8b0bf\AndroidManifest.xml:25:5-20
 	android:supportsRtl
 		ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
 	android:label
@@ -94,12 +94,12 @@ ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.
 		ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
 uses-sdk
 ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\e6c98c60a62b3314205f30d0c2b6404d\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\e6c98c60a62b3314205f30d0c2b6404d\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\a004a95464e14a813ee1d57f7ea8b0bf\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\a004a95464e14a813ee1d57f7ea8b0bf\AndroidManifest.xml:21:5-23:54
 MERGED from [:CordovaLib] C:\xampp\htdocs\phone\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] C:\xampp\htdocs\phone\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:24.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\e6c98c60a62b3314205f30d0c2b6404d\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:24.1.1] C:\Users\Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\a004a95464e14a813ee1d57f7ea8b0bf\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:16:42-71
 	android:minSdkVersion
