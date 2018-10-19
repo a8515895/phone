@@ -7,7 +7,6 @@ export class AdminService {
     constructor(private _http: HttpService) {    
     }
     getAdmin(condition?){
-        console.log(condition);
         return this._http.get('getListAdmin',condition);
     }
     getDetailAdmin(data){

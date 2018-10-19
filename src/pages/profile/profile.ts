@@ -10,7 +10,6 @@ export class ProfilePage {
     constructor(public navCtrl: NavController,public ad : AdminService) {
         this.ad.getAdmin().then(
             res=>{
-                console.log(res);
             },
         )
     } 

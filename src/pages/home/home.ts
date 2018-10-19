@@ -1,8 +1,9 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AdminService } from '../../app/service/admin.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Socket } from 'ng-socket-io';
+import { LoginPage } from '../../pages/login/login';
 import { ChatPage } from '../chat/chat'; 
 import BASE_URL from '../../app/BASE_URL';
 import { ShareService } from '../../app/service/share.service'
@@ -12,12 +13,17 @@ import $ from 'jquery';
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit {  
+  @ViewChild('mycontent') nav : NavController;
   user : any;
   BASE_URL = BASE_URL;
   listAdmin : Array<any> = new Array;
-  audio : any;
+  audio : any;  
   constructor(public navCtrl: NavController,private sv : ShareService,public ad : AdminService,private cs :CookieService,private socket: Socket) {
+    if(this.cs.getObject('user') == null || this.cs.getObject('user') == ''){
+      this.nav.setRoot(LoginPage);
+    }
     this.user = this.cs.getObject("user")['original'];
+    console.log(this.cs.getObject("user"));
     this.socket.emit("listAdmin");
     this.getListAdminChat();     
     this.NODE_userlogout();
@@ -42,7 +48,9 @@ export class HomePage implements OnInit {
   }
   NODE_newUserLogin(){
     this.socket.on("newUserLogin",(data)=>{ 
+      
       let interval = setInterval(()=>{
+        
         if(this.listAdmin.length == $(`ion-item`).length){
           Object.keys(data).forEach((e)=>{
             let id = data[e].id;

@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'; 
-import { HomePage } from '../pages/home/home'; 
+import { TabsPage } from '../pages/tab/tab'; 
 import { Socket } from 'ng-socket-io';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { NavController } from 'ionic-angular';
@@ -14,7 +14,7 @@ import BASE_URL from '../app/BASE_URL';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  // rootPage:any = LoginPage;
+  rootPage:any = TabsPage;
   BASE_URL = BASE_URL;
   user : any ={
     avartar : 'user.avartar',
@@ -22,18 +22,18 @@ export class MyApp {
   @ViewChild('mycontent') nav : NavController;
   constructor(platform: Platform,private sv : ShareService, statusBar: StatusBar, splashScreen: SplashScreen,private socket: Socket,private cookieService: CookieService) {
     platform.ready().then(() => {
-      console.log("Cookie",this.cookieService.getObject('user'));
-      this.checkCookie();
       statusBar.styleDefault();
       splashScreen.hide();
+      this.checkCookie();
+
     });
   }
-  checkCookie(){
+  checkCookie(){    
     if(this.cookieService.getObject('user') == null || this.cookieService.getObject('user') == ''){
       return this.nav.setRoot(LoginPage);
     }else{
       this.user = this.cookieService.getObject("user")['original'];
-      return this.nav.setRoot(HomePage);
+      return this.nav.setRoot(this.rootPage);
     }
   }
   openPage(page){

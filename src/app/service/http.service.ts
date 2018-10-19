@@ -1,13 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable,ViewChild } from '@angular/core';
+import { NavController } from 'ionic-angular';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { LoginPage } from '../../pages/login/login';
 import BASE_URL from '../BASE_URL';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 // declare var $ :JQuery;
 import $ from 'jquery';
-
+import { Socket } from 'ng-socket-io';
 
 @Injectable()
 export class HttpService {
@@ -15,7 +17,8 @@ export class HttpService {
     options : any;
     token : any;
     baseUrl : string = BASE_URL+'api/';
-    constructor(private http: Http,private cookieService: CookieService) {
+    @ViewChild('mycontent') nav : NavController;
+    constructor(private socket : Socket,private http: Http,private cookieService: CookieService) {
 
     }
     public get(url,body=null){
@@ -84,9 +87,13 @@ export class HttpService {
     }
 
     private handleError (error: Response) {
-        if(error.status == 403 || error.status == 401){
-            alert("Đăng nhập hết hạn. Mời đăng nhập lại");
+        if(error.status == 403 || error.status == 401){ 
+            // this.handleAuthError();
+            // this.socket.emit("adminLogout",this.cookieService.getObject("user")['original']);
+            // this.cookieService.removeAll();
+            // return this.nav.setRoot(LoginPage);
+            return Observable.throw(error.json().error || "Server error");
         }
         return Observable.throw(error.json().error || "Server error");
-      }
+    }
 }

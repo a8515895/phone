@@ -5,7 +5,6 @@ export class ShareService {
     constructor() {    
     }
     addNewUser(data){
-        console.log("Da Add");
         this.arrUser = data;      
     }
     removeUser(data){

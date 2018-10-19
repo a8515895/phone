@@ -1,6 +1,7 @@
 .message{
     margin : 5px 0;
 }
+
 .message .content{
     padding : 10px; 
     padding : 5px;
@@ -67,4 +68,16 @@
 .iconAcitveFB.active{
     display: block;
     background: rgb(66, 183, 42);
+}
+.prepareSendImage{
+    height: 75px;
+    background: #fff;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    bottom: 25px;
+    display: none;
+}
+.prepareSendImage.active{
+    display: block;
 }

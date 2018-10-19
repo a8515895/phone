@@ -1,47 +1,48 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>
+    <ion-navbar class="main-background">
+        <ion-title class="ion-title-color">
             <button style="display : inline-block" ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
             Ionic Chat
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content style="height : 100%;width : 100%;background: #f7f773">
-    <div style="height : 95%;width : 100%;overflow-y: auto;" #list>
+<ion-content style="height : 100%;width : 100%;background: #d4d4d478">
+    <div style="height : calc(100% - 25px);width : 100%;overflow-y: auto;" #list>
         <div class="message {{i.id == user.id ? 'reply' : 'receive'}}" *ngFor="let i of message">
             <div class="avarta">
                 <img style="border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{i.avartar == null ? 'no-avartar.png' : i.avartar}}">
             </div>
             <div class="content">
-                <span style="word-wrap: normal">
+                <span *ngIf="i.type == null" style="word-wrap: normal">
                     {{i.message}}
                 </span>
-            </div>
-            <div style="clear : both"></div>
-        </div>
-        <div class="message reply">
-            <div class="avarta">
-                <img style="border-radius : 100%" src="{{BASE_URL}}public/img/avartar/no-avartar.png">
-            </div>
-            <div class="content">
-                <span style="word-wrap: normal">
-                    <img [src]="base64Image" />
-                </span>
+                <div *ngIf="i.type == 'img'" style="max-width : 100px;max-height : 100px;overflow : hidden">
+                    <img [src]="i.message" width='100%' />
+                </div>
             </div>
             <div style="clear : both"></div>
         </div>
     </div>
-    <div style="height : 5%;width : 100%">
-        <div style="width : 80%;float: left;height : 100%">
-            <input #input style="width : 100%;height : 100%;border: 0;padding: 10px" (click)="hasSeen()" />
+    <div style="height : 25px;width : 100%;position: relative;">
+        <div class="prepareSendImage">
+            <div style="height: 60px;width: 60px;padding: 10px;position : relative">
+                <img [src]="base64Image" style="border-radius: 10px" width="100%">
+                <div style="position : absolute;top : 0;right : 0;cursor: pointer;" (click)="deleteImage()"><ion-icon name="close-circle"></ion-icon></div>
+            </div>
         </div>
-        <div style="width : 10%;float: left;height : 100%">
-            <button style="width : 100%;height : 100%;line-height: 1.5" (click)="openGallery()">
-                <ion-icon name="albums"></ion-icon>
-            </button>
-        </div>
-        <div style="width : 10%;float: left;height : 100%">
-            <button style="width : 100%;height : 100%;line-height: 1.5" (click)="sendMessage(input)"><ion-icon style="color : rgba(53, 120, 229, 1)" name="paper-plane"></ion-icon></button>
+        <div style="height : 25px">
+            <div style="width : 80%;float: left;height : 100%">
+                <input #input style="width : 100%;height : 100%;border: 0;padding: 10px" (click)="hasSeen()" />
+            </div>
+            <div style="width : 10%;float: left;height : 100%">
+                <button style="width : 100%;height : 100%;line-height: 1.5" (click)="openGallery()">
+                    <ion-icon name="albums"></ion-icon>
+                </button>
+            </div>
+            <div style="width : 10%;float: left;height : 100%">
+                <button style="width : 100%;height : 100%;line-height: 1.5" (click)="sendMessage(input)"><ion-icon style="color : rgba(53, 120, 229, 1)" name="paper-plane"></ion-icon></button>
+            </div>
+            <div style="clear : both"></div>
         </div>
     </div>
 </ion-content>

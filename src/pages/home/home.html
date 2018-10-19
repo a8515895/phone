@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
+  <ion-navbar class="main-background">
+    <ion-title class="ion-title-color">
       <button style="display : inline-block" ion-button menuToggle>
         <div class="avarta">
           <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? 'no-avartar.png' : user.avartar}}">
@@ -8,9 +8,10 @@
       </button>
       Ionic Home
     </ion-title>
+
   </ion-navbar>
 </ion-header>
-<ion-content  style="height : 100%;width : 100%;background: #f7f773">
+<ion-content  style="height : 100%;width : 100%">
   <div  style="background : #d5d5d5;width: max-content;cursor : pointer;margin: auto;margin-top : 50px;padding : 10px;border-radius : 4px">
     <ion-list #list>
       <ion-item class="admin" id="admin_{{admin.id}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">
@@ -29,4 +30,9 @@
     </ion-list>
   </div>
 </ion-content>
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="Tin nhắn" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Danh bạ" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Nhật Ký" tabIcon="home"></ion-tab>
+</ion-tabs>
   

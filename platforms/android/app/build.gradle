@@ -91,6 +91,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-plugin-crosswalk-webview/starter-xwalk.gradle"
+apply from: "../cordova-android-support-gradle-release/starter-cordova-android-support-gradle-release.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

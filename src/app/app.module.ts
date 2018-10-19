@@ -15,6 +15,9 @@ import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
 import { ChatPage } from '../pages/chat/chat';
 import { LoginPage } from '../pages/login/login';
+import { Diary } from '../pages/diary/diary';
+import { Phonebook } from '../pages/phonebook/phonebook';
+import { TabsPage } from '../pages/tab/tab';
 // SERVICE
 import { HttpService } from './service/http.service';
 import { VerifyService } from './service/verify.service';
@@ -28,10 +31,13 @@ export function cookieServiceFactory() {
 @NgModule({
   declarations: [
     MyApp,
+    TabsPage,
     HomePage,
     ProfilePage,
     ChatPage,
-    LoginPage
+    LoginPage,
+    Diary,
+    Phonebook
   ],
   imports: [
     BrowserModule,
@@ -45,10 +51,13 @@ export function cookieServiceFactory() {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    TabsPage,
     HomePage,
     ProfilePage,
     ChatPage,
-    LoginPage
+    LoginPage,
+    Diary,
+    Phonebook
   ],
   providers: [
     StatusBar,
