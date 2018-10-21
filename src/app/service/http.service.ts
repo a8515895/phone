@@ -1,12 +1,13 @@
 import { Injectable,ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx'
 import { CookieService } from 'angular2-cookie/services/cookies.service';
-import { LoginPage } from '../../pages/login/login';
+import { _throw } from 'rxjs/observable/throw';
 import BASE_URL from '../BASE_URL';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 // declare var $ :JQuery;
 import $ from 'jquery';
 import { Socket } from 'ng-socket-io';
@@ -87,13 +88,6 @@ export class HttpService {
     }
 
     private handleError (error: Response) {
-        if(error.status == 403 || error.status == 401){ 
-            // this.handleAuthError();
-            // this.socket.emit("adminLogout",this.cookieService.getObject("user")['original']);
-            // this.cookieService.removeAll();
-            // return this.nav.setRoot(LoginPage);
-            return Observable.throw(error.json().error || "Server error");
-        }
-        return Observable.throw(error.json().error || "Server error");
+        return Observable.throw(error.status || "Server error");
     }
 }

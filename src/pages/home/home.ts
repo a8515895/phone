@@ -13,19 +13,14 @@ import $ from 'jquery';
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit {  
-  @ViewChild('mycontent') nav : NavController;
   user : any;
   BASE_URL = BASE_URL;
-  listAdmin : Array<any> = new Array;
+  listAdmin : Array<any> = [];
   audio : any;  
   constructor(public navCtrl: NavController,private sv : ShareService,public ad : AdminService,private cs :CookieService,private socket: Socket) {
-    if(this.cs.getObject('user') == null || this.cs.getObject('user') == ''){
-      this.nav.setRoot(LoginPage);
-    }
     this.user = this.cs.getObject("user")['original'];
-    console.log(this.cs.getObject("user"));
     this.socket.emit("listAdmin");
-    this.getListAdminChat();     
+    this.getAdminCloneMessage();     
     this.NODE_userlogout();
     this.NODE_socketOnMessage();
     this.NODE_hasSeen();
@@ -36,13 +31,19 @@ export class HomePage implements OnInit {
     this.NODE_newUserLogin();
     this.NODE_listRoom();
   }
-  ngAfterViewInit() {
-
-  }
-  getListAdminChat(){
-    this.ad.getAdmin({"condition" : `admin.id != `+this.user.id}).then(
+  getAdminCloneMessage(){
+    this.ad.getAdminCloneMessage().then(
       res => {
-        this.listAdmin = res.splice(0);
+        if(!this.sv.empty(res.error)){
+          this.cs.removeAll();
+          return this.navCtrl.setRoot(LoginPage);
+        }else{
+          this.listAdmin = res.splice(0);
+          console.log(this.listAdmin);
+        }
+      },
+      err =>{
+        console.log("Co Err nek",err);
       }
     )
   }
@@ -51,7 +52,7 @@ export class HomePage implements OnInit {
       
       let interval = setInterval(()=>{
         
-        if(this.listAdmin.length == $(`ion-item`).length){
+        if(this.listAdmin.length == $(`.chat-home`).length){
           Object.keys(data).forEach((e)=>{
             let id = data[e].id;
             $(`#admin_${id} .iconAcitveFB`).addClass("active");

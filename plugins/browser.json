@@ -7,34 +7,34 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-android-support-gradle-release": {
-      "PACKAGE_NAME": "io.ionic.starter"
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
     },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-crosswalk-webview": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-file-transfer": {
+    "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-splashscreen": {
+    "cordova-plugin-camera": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "ionic-plugin-keyboard": {
+    "cordova-plugin-crosswalk-webview": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-android-support-gradle-release": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },

@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { VerifyService } from '../../app/service/verify.service';
 import { ToastController } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { TabsPage } from '../tab/tab';
 import { LoadingController } from 'ionic-angular';
 import { Socket } from 'ng-socket-io';
 import { ShareService } from '../../app/service/share.service'
@@ -23,7 +23,7 @@ export class LoginPage {
     loader : any;
     constructor(public loadingCtrl: LoadingController,private sv: ShareService,public socket : Socket,public navCtrl: NavController,private toastCtrl: ToastController,private _sv : VerifyService,private cookieService: CookieService,) {
         if(this.cookieService.get("isLogin") != "" &&  this.cookieService.get("isLogin") != null){
-            this.navCtrl.setRoot(HomePage);
+            this.navCtrl.setRoot(TabsPage);
         }
         this.loader = this.loadingCtrl.create({
             content: "Please wait...",
@@ -52,7 +52,7 @@ export class LoginPage {
                     this.cookieService.put('isLogin',res.access_token);   
                     this.cookieService.put('level',res.level);   
                     this.toastSuccess.present();
-                    this.navCtrl.setRoot(HomePage);
+                    this.navCtrl.setRoot(TabsPage);
                     return;
                 }
                 this.loader.dismissAll();

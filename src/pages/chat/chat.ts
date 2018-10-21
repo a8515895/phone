@@ -37,11 +37,13 @@ export class ChatPage implements OnInit{
     }
     sendMessage(mess){
         if(!this.sv.empty(this.base64Image)){
+            this.addAdminCloneMessage("Bạn đã nhận hình ảnh","img")
             this.socket.emit("sendMessage",{type : 'img',room : this.room,user : this.user,data : this.base64Image});
             this.base64Image = "";
             $(".prepareSendImage").removeClass("active");
         }
         if(!this.sv.empty(mess.value)){
+            this.addAdminCloneMessage(mess.value,"text")
             this.socket.emit("sendMessage",{room : this.room,user : this.user,data : mess.value});
             mess.value="";
         }
@@ -84,6 +86,15 @@ export class ChatPage implements OnInit{
         this.render.listen(item,"click",()=>{
             // this.socket.emit("is_seen",{status : true,room : e.name,email : this.cookie.getObject('user')['original']['email']});
         });
+    }
+    addAdminCloneMessage(mess,type){
+        let data = {
+            "room"  : this.room,
+            "id"    : this.user.id,
+        }
+        data['last_message'] = mess;
+        data['type'] = type;
+        this.ad.addAdminCloneMessage(data);
     }
     NODE_socketOnMessage(){
         this.socket.on("sendMessage",(data)=>{

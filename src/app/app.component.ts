@@ -14,7 +14,7 @@ import BASE_URL from '../app/BASE_URL';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any ;
   BASE_URL = BASE_URL;
   user : any ={
     avartar : 'user.avartar',
@@ -30,11 +30,13 @@ export class MyApp {
   }
   checkCookie(){    
     if(this.cookieService.getObject('user') == null || this.cookieService.getObject('user') == ''){
-      return this.nav.setRoot(LoginPage);
+      this.rootPage = LoginPage
     }else{
       this.user = this.cookieService.getObject("user")['original'];
-      return this.nav.setRoot(this.rootPage);
+      this.rootPage = TabsPage
     }
+    return this.nav.setRoot(this.rootPage);
+
   }
   openPage(page){
     switch(page){

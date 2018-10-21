@@ -40,8 +40,7 @@ export class Phonebook implements OnInit {
     NODE_newUserLogin(){        
         this.socket.on("newUserLogin",(data)=>{ 
         let interval = setInterval(()=>{
-            // console.log("newUserLogins ",this.listAdmin.length+" "+$(`ion-item`).length);
-            if(this.listAdmin.length == $(`ion-item .phonebook`).length){
+            if(this.listAdmin.length == $(`.phonebook`).length){
             Object.keys(data).forEach((e)=>{
                 let id = data[e].id;
                 $(`#admin_${id} .iconAcitveFB`).addClass("active");

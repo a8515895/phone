@@ -9,6 +9,12 @@ export class AdminService {
     getAdmin(condition?){
         return this._http.get('getListAdmin',condition);
     }
+    getAdminCloneMessage(condition?){
+        return this._http.get('getListAdminCloneMessage',condition);
+    }
+    addAdminCloneMessage(data){
+        return this._http.post('addAdminCloneMessage',data);
+    }
     getDetailAdmin(data){
         return this._http.get('getDetailAdmin',data);
     }
