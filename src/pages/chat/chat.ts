@@ -25,9 +25,8 @@ export class ChatPage implements OnInit{
     base64Image : any;
     constructor(private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private cs :CookieService,private socket: Socket,private _DomSanitizationService: DomSanitizer) {
         this.user = this.cs.getObject("user")['original'];
-        this.room = this.navParam.get("room");
-        this.NODE_socketOnMessage();
-        
+        this.room = this.sv.changeRoom(this.navParam.get("room"));
+        this.NODE_socketOnMessage();        
         this.socket.on("getHistory",(data)=>{
             this.message = data;
         })
@@ -36,15 +35,16 @@ export class ChatPage implements OnInit{
         this.socket.emit("getHistory",{room : this.room});
     }
     sendMessage(mess){
+        let admin_receive = this.room.split("_")[0] == this.user.id ? this.room.split("_")[1] : this.room.split("_")[0];
         if(!this.sv.empty(this.base64Image)){
-            this.addAdminCloneMessage("Bạn đã nhận hình ảnh","img")
-            this.socket.emit("sendMessage",{type : 'img',room : this.room,user : this.user,data : this.base64Image});
+            this.addAdminCloneMessage({last_message : "Bạn đã nhận hình ảnh",type : "img",room : this.room,id : this.user.id,admin_send : this.user.id,admin_receive : admin_receive})
+            this.socket.emit("sendMessage",{type : 'img',room : this.room,user : this.user,data : this.base64Image,admin_send : this.user.id,admin_receive : admin_receive});
             this.base64Image = "";
             $(".prepareSendImage").removeClass("active");
         }
         if(!this.sv.empty(mess.value)){
-            this.addAdminCloneMessage(mess.value,"text")
-            this.socket.emit("sendMessage",{room : this.room,user : this.user,data : mess.value});
+            this.addAdminCloneMessage({last_message : mess.value,type : "text",room : this.room,id : this.user.id,admin_send : this.user.id,admin_receive : admin_receive})
+            this.socket.emit("sendMessage",{room : this.room,user : this.user,data : mess.value,admin_send : this.user.id,admin_receive : admin_receive});
             mess.value="";
         }
     }
@@ -87,13 +87,7 @@ export class ChatPage implements OnInit{
             // this.socket.emit("is_seen",{status : true,room : e.name,email : this.cookie.getObject('user')['original']['email']});
         });
     }
-    addAdminCloneMessage(mess,type){
-        let data = {
-            "room"  : this.room,
-            "id"    : this.user.id,
-        }
-        data['last_message'] = mess;
-        data['type'] = type;
+    addAdminCloneMessage(data){
         this.ad.addAdminCloneMessage(data);
     }
     NODE_socketOnMessage(){

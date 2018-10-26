@@ -13,7 +13,7 @@
 </ion-header>
 <ion-content  style="height : 100%;width : 100%">
     <ion-list>
-        <ion-item class="admin phonebook" id="admin_{{admin.id}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">
+        <ion-item class="admin phonebook" id="admin_phonebook_{{admin.id}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">
             <ion-avatar item-start style="position : relative">
                 <img src="{{BASE_URL+'public/img/avartar/'}}{{admin.avartar == null ? 'no-avartar.png' : admin.avartar}}">
                 <span style="display : none" class="pull-right messageNotSeen">0</span>

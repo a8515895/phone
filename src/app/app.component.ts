@@ -33,10 +33,13 @@ export class MyApp {
       this.rootPage = LoginPage
     }else{
       this.user = this.cookieService.getObject("user")['original'];
-      this.rootPage = TabsPage
+      this.rootPage = TabsPage;
+      this.socket.on("login",()=>{
+        console.log("Đã nghe được yêu cầu cung cấp thông tin")
+        this.socket.emit("login",this.user);
+      });
     }
     return this.nav.setRoot(this.rootPage);
-
   }
   openPage(page){
     switch(page){

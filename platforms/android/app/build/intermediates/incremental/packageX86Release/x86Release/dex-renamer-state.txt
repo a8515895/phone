@@ -1,0 +1,4 @@
+#Tue Oct 16 17:49:34 ICT 2018
+base.0=C\:\\xampp\\htdocs\\phone\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\x86\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

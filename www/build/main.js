@@ -542,8 +542,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, sv, ad, cs, socket) {
+    function HomePage(navCtrl, render, sv, ad, cs, socket) {
         this.navCtrl = navCtrl;
+        this.render = render;
         this.sv = sv;
         this.ad = ad;
         this.cs = cs;
@@ -606,11 +607,7 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.NODE_socketOnMessage = function () {
         var _this = this;
         this.socket.on("sendMessage", function (data) {
-            if (data.data.user.id != _this.user.id)
-                _this.audio.play();
-            var seen = data.room.seen;
-            __WEBPACK_IMPORTED_MODULE_9_jquery___default()("#admin_" + seen.agent + " .messageNotSeen").css("display", "block");
-            __WEBPACK_IMPORTED_MODULE_9_jquery___default()("#admin_" + seen.agent + " .messageNotSeen").html(seen.num);
+            _this.createNewMessage(data);
         });
     };
     HomePage.prototype.NODE_listRoom = function () {
@@ -644,12 +641,31 @@ var HomePage = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_9_jquery___default()("#admin_" + id + " .messageNotSeen").html(data.seen.num);
         });
     };
-    var _a, _b, _c, _d, _e;
+    HomePage.prototype.createNewMessage = function (data) {
+        var _this = this;
+        var item = document.createElement("ion-item");
+        item.className = "admin chat-home";
+        var avartar;
+        if (data.user.avartar != null && data.user.avartar != '')
+            avartar = data.user.avartar;
+        else
+            avartar = 'no-avartar.png';
+        item.innerHTML =
+            "\n      <ion-item class=\"admin chat-home\" id=\"admin_" + data.user.id + "\">\n        <ion-avatar item-start style=\"position : relative\">\n            <img src=\"" + (__WEBPACK_IMPORTED_MODULE_7__app_BASE_URL__["a" /* default */] + 'public/img/avartar/') + avartar + "\">\n            <span style=\"display : none\" class=\"pull-right messageNotSeen\">0</span>\n            <span class=\"pull-right iconAcitveFB\"></span>\n        </ion-avatar>\n        <h2>{{admin.name}}</h2>\n        <p>{{admin.last_message}}</p>\n      </ion-item>\n      ";
+        this.render.appendChild(this.ul.nativeElement, item);
+        this.render.listen(item, "click", function () {
+            _this.chooseAdmin(data.user);
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('list'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+    ], HomePage.prototype, "ul", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\xampp\htdocs\phone\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar class="main-background">\n\n    <ion-title class="ion-title-color">\n\n      <button style="display : inline-block" ion-button menuToggle>\n\n        <div class="avarta">\n\n          <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? \'no-avartar.png\' : user.avartar}}">\n\n        </div>\n\n      </button>\n\n      Ionic Home\n\n    </ion-title>\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content  style="height : 100%;width : 100%">  \n\n  <ion-list>\n\n    <ion-item class="admin chat-home" id="admin_{{admin.id}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">\n\n      <ion-avatar item-start style="position : relative">\n\n          <img src="{{BASE_URL+\'public/img/avartar/\'}}{{admin.avartar == null ? \'no-avartar.png\' : admin.avartar}}">\n\n          <span style="display : none" class="pull-right messageNotSeen">0</span>\n\n          <span class="pull-right iconAcitveFB"></span>\n\n      </ion-avatar>\n\n      <h2>{{admin.name}}</h2>\n\n      <p>{{admin.last_message}}</p>\n\n    </ion-item>\n\n    <h3 *ngIf="listAdmin.length == 0 " style="color: #ccc;text-align: center">KHÔNG CÓ TIN NHẮN NÀO</h3>\n\n  </ion-list>\n\n</ion-content>\n\n  '/*ion-inline-end:"C:\xampp\htdocs\phone\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\xampp\htdocs\phone\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar class="main-background">\n\n    <ion-title class="ion-title-color">\n\n      <button style="display : inline-block" ion-button menuToggle>\n\n        <div class="avarta">\n\n          <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? \'no-avartar.png\' : user.avartar}}">\n\n        </div>\n\n      </button>\n\n      Ionic Home\n\n    </ion-title>\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content  style="height : 100%;width : 100%">  \n\n  <ion-list #list>\n\n    <ion-item class="admin chat-home" id="target_{{admin.target}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">\n\n      <ion-avatar item-start style="position : relative">\n\n          <img src="{{BASE_URL+\'public/img/avartar/\'}}{{admin.avartar == null ? \'no-avartar.png\' : admin.avartar}}">\n\n          <span style="display : none" class="pull-right messageNotSeen">0</span>\n\n          <span class="pull-right iconAcitveFB"></span>\n\n      </ion-avatar>\n\n      <h2>{{admin.name}}</h2>\n\n      <p class="last_message">{{admin.last_message}}</p>\n\n    </ion-item>\n\n    <h3 class="admin chat-home" *ngIf="listAdmin.length == 0 " style="color: #ccc;text-align: center">KHÔNG CÓ TIN NHẮN NÀO</h3>\n\n  </ion-list>\n\n</ion-content>\n\n  '/*ion-inline-end:"C:\xampp\htdocs\phone\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__app_service_share_service__["a" /* ShareService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__app_service_share_service__["a" /* ShareService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__app_service_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_service_admin_service__["a" /* AdminService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_cookie_services_cookies_service__["CookieService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_cookie_services_cookies_service__["CookieService"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ng_socket_io__["Socket"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ng_socket_io__["Socket"]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer2"], __WEBPACK_IMPORTED_MODULE_8__app_service_share_service__["a" /* ShareService */], __WEBPACK_IMPORTED_MODULE_2__app_service_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_3_angular2_cookie_services_cookies_service__["CookieService"], __WEBPACK_IMPORTED_MODULE_4_ng_socket_io__["Socket"]])
     ], HomePage);
     return HomePage;
 }());
@@ -788,7 +804,7 @@ var Phonebook = /** @class */ (function () {
     };
     Phonebook = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-phonebook',template:/*ion-inline-start:"C:\xampp\htdocs\phone\src\pages\phonebook\phonebook.html"*/'<ion-header>\n\n    <ion-navbar class="main-background">\n\n        <ion-title class="ion-title-color">\n\n        <button style="display : inline-block" ion-button menuToggle>\n\n            <div class="avarta">\n\n            <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? \'no-avartar.png\' : user.avartar}}">\n\n            </div>\n\n        </button>\n\n        Ionic Phone Book\n\n        </ion-title>\n\n\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content  style="height : 100%;width : 100%">\n\n    <ion-list>\n\n        <ion-item class="admin phonebook" id="admin_{{admin.id}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">\n\n            <ion-avatar item-start style="position : relative">\n\n                <img src="{{BASE_URL+\'public/img/avartar/\'}}{{admin.avartar == null ? \'no-avartar.png\' : admin.avartar}}">\n\n                <span style="display : none" class="pull-right messageNotSeen">0</span>\n\n                <span class="pull-right iconAcitveFB"></span>\n\n            </ion-avatar>\n\n            <h2>{{admin.name}}</h2>\n\n            <p>{{admin.email}}</p>\n\n        </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\phone\src\pages\phonebook\phonebook.html"*/
+            selector: 'page-phonebook',template:/*ion-inline-start:"C:\xampp\htdocs\phone\src\pages\phonebook\phonebook.html"*/'<ion-header>\n\n    <ion-navbar class="main-background">\n\n        <ion-title class="ion-title-color">\n\n        <button style="display : inline-block" ion-button menuToggle>\n\n            <div class="avarta">\n\n            <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? \'no-avartar.png\' : user.avartar}}">\n\n            </div>\n\n        </button>\n\n        Ionic Phone Book\n\n        </ion-title>\n\n\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content  style="height : 100%;width : 100%">\n\n    <ion-list>\n\n        <ion-item class="admin phonebook" id="admin_phonebook_{{admin.id}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">\n\n            <ion-avatar item-start style="position : relative">\n\n                <img src="{{BASE_URL+\'public/img/avartar/\'}}{{admin.avartar == null ? \'no-avartar.png\' : admin.avartar}}">\n\n                <span style="display : none" class="pull-right messageNotSeen">0</span>\n\n                <span class="pull-right iconAcitveFB"></span>\n\n            </ion-avatar>\n\n            <h2>{{admin.name}}</h2>\n\n            <p>{{admin.email}}</p>\n\n        </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\phone\src\pages\phonebook\phonebook.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_7__app_service_share_service__["a" /* ShareService */], __WEBPACK_IMPORTED_MODULE_2__app_service_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_3_angular2_cookie_services_cookies_service__["CookieService"], __WEBPACK_IMPORTED_MODULE_4_ng_socket_io__["Socket"]])
     ], Phonebook);
@@ -1113,7 +1129,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\xampp\htdocs\phone\src\app\app.html"*/'<ion-menu [content]="mycontent">\n\n    <ion-header>\n\n        <ion-toolbar class="main-background">\n\n            <ion-title >\n\n                <div style="width : 100%" class="avarta">\n\n                    <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? \'no-avartar.png\' : user.avartar}}">\n\n                    <span style="display : inline-block;float : right;">{{user.name == null ? \'Không xác định\' : user.name}}</span>\n\n                </div>\n\n            </ion-title>\n\n        </ion-toolbar>\n\n    </ion-header>\n\n    <ion-content>\n\n        <ion-list>\n\n            <button ion-item menuClose (click)="openPage(\'profile\')">Profile</button>\n\n        </ion-list>\n\n        <ion-list>\n\n            <button ion-item menuClose (click)="openPage(\'chat\')">Chat</button>\n\n        </ion-list>\n\n        <ion-list>\n\n            <button ion-item menuClose (click)="openPage(\'logout\')">Logout</button>\n\n        </ion-list>\n\n    </ion-content>\n\n</ion-menu>\n\n<ion-nav #mycontent [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\xampp\htdocs\phone\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\xampp\htdocs\phone\src\app\app.html"*/'<ion-menu [content]="mycontent">\n    <ion-header>\n        <ion-toolbar class="main-background">\n            <ion-title >\n                <div style="width : 100%" class="avarta">\n                    <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{user.avartar == null ? \'no-avartar.png\' : user.avartar}}">\n                    <span style="display : inline-block;float : right;">{{user.name == null ? \'Không xác định\' : user.name}}</span>\n                </div>\n            </ion-title>\n        </ion-toolbar>\n    </ion-header>\n    <ion-content>\n        <ion-list>\n            <button ion-item menuClose (click)="openPage(\'profile\')">Profile</button>\n        </ion-list>\n        <ion-list>\n            <button ion-item menuClose (click)="openPage(\'chat\')">Chat</button>\n        </ion-list>\n        <ion-list>\n            <button ion-item menuClose (click)="openPage(\'logout\')">Logout</button>\n        </ion-list>\n    </ion-content>\n</ion-menu>\n<ion-nav #mycontent [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\xampp\htdocs\phone\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_9__app_service_share_service__["a" /* ShareService */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_7_ng_socket_io__["Socket"], __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__["CookieService"]])
     ], MyApp);

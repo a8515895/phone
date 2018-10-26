@@ -39,20 +39,20 @@ export class Phonebook implements OnInit {
     }
     NODE_newUserLogin(){        
         this.socket.on("newUserLogin",(data)=>{ 
-        let interval = setInterval(()=>{
-            if(this.listAdmin.length == $(`.phonebook`).length){
-            Object.keys(data).forEach((e)=>{
-                let id = data[e].id;
-                $(`#admin_${id} .iconAcitveFB`).addClass("active");
-            })
-            clearInterval(interval)
-            }
-        },1000)
+            let interval = setInterval(()=>{
+                if(this.listAdmin.length == $(`.phonebook`).length){
+                Object.keys(data).forEach((e)=>{
+                    let id = data[e].id;
+                    $(`#admin_phonebook_${id} .iconAcitveFB`).addClass("active");
+                })
+                clearInterval(interval)
+                }
+            },1000)
         });
     }
     NODE_userlogout(){
         this.socket.on("adminLogout",(data)=>{
-        $(`#admin_${data.id} .iconAcitveFB`).removeClass("active");
+        $(`#admin_phonebook_${data.id} .iconAcitveFB`).removeClass("active");
         });
     }
     chooseAdmin(admin){
@@ -65,21 +65,21 @@ export class Phonebook implements OnInit {
         this.socket.on("sendMessage",(data)=>{
             if(data.data.user.id != this.user.id) this.audio.play();        
             let seen = data.room.seen;
-            $("#admin_"+seen.agent+" .messageNotSeen").css("display","block");
-            $("#admin_"+seen.agent+" .messageNotSeen").html(seen.num);
+            $("#admin_phonebook_"+seen.agent+" .messageNotSeen").css("display","block");
+            $("#admin_phonebook_"+seen.agent+" .messageNotSeen").html(seen.num);
         });
     }
     NODE_listRoom(){
         this.socket.on("listRoom",(data)=>{
         let interval = setInterval(()=>{
-            if(this.listAdmin.length == $(`ion-item`).length){
+            if(this.listAdmin.length == $(`.phonebook`).length){
             let arrRoom = data;
             this.listAdmin.forEach((e)=>{
                 let room = this.sv.changeRoom(this.user.id+"_"+e.id);
                 if(!this.sv.empty(arrRoom[room])){
                 let seen = arrRoom[room].seen;
-                $("#admin_"+seen.agent+" .messageNotSeen").css("display","block");
-                $("#admin_"+seen.agent+" .messageNotSeen").html(seen.num);
+                $("#admin_phonebook_"+seen.agent+" .messageNotSeen").css("display","block");
+                $("#admin_phonebook_"+seen.agent+" .messageNotSeen").html(seen.num);
                 }        
             })
             clearInterval(interval)
@@ -92,8 +92,8 @@ export class Phonebook implements OnInit {
         let id;
         if(data.id1 != this.user.id) id = data.id1;
         else id = data.id2;
-        $("#admin_"+id+" .messageNotSeen").css("display","none");
-        $("#admin_"+id+" .messageNotSeen").html(data.seen.num);
+        $("#admin_phonebook_"+id+" .messageNotSeen").css("display","none");
+        $("#admin_phonebook_"+id+" .messageNotSeen").html(data.seen.num);
         });
     }
 }
