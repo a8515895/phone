@@ -1,11 +1,10 @@
 import { Component,OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Socket } from 'ng-socket-io';
 import { ChatPage } from '../chat/chat'; 
 import BASE_URL from '../../app/BASE_URL';
-import { ShareService } from '../../app/service/share.service'
 import $ from 'jquery';
 @Component({
     selector: 'page-phonebook',
@@ -16,19 +15,18 @@ export class Phonebook implements OnInit {
     BASE_URL =BASE_URL;
     listAdmin : any;
     audio : any;
-    constructor(public navCtrl: NavController,private sv : ShareService,public ad : AdminService,private cs :CookieService,private socket: Socket) {
-        this.user = this.cs.getObject("user")['original'];
+    constructor(public navCtrl: NavController,public ad : AdminService,private cs :CookieService,private socket: Socket) {
+        let cookie = this.cs.getObject("user");
+        this.user = cookie['original'];
         this.socket.emit("listAdmin");
         this.getListAdminChat();     
         this.NODE_userlogout();
         this.NODE_socketOnMessage();
         this.NODE_hasSeen();
-        this.socket.emit("login",this.user);
     } 
     ngOnInit(){
-        this.audio = new Audio("../../assets/mess2.mp3");
+        // this.audio = new Audio("../../assets/mess2.mp3");
         this.NODE_newUserLogin();
-        this.NODE_listRoom();
     }
     getListAdminChat(){
         this.ad.getAdmin({"condition" : `admin.id != `+this.user.id}).then(
@@ -37,22 +35,14 @@ export class Phonebook implements OnInit {
             }
         )
     }
-    NODE_newUserLogin(){        
+    NODE_newUserLogin(){  
         this.socket.on("newUserLogin",(data)=>{ 
-            let interval = setInterval(()=>{
-                if(this.listAdmin.length == $(`.phonebook`).length){
-                Object.keys(data).forEach((e)=>{
-                    let id = data[e].id;
-                    $(`#admin_phonebook_${id} .iconAcitveFB`).addClass("active");
-                })
-                clearInterval(interval)
-                }
-            },1000)
+            $(`#admin_phonebook_${data.id} .iconAcitveFB`).addClass("active");
         });
     }
     NODE_userlogout(){
         this.socket.on("adminLogout",(data)=>{
-        $(`#admin_phonebook_${data.id} .iconAcitveFB`).removeClass("active");
+            $(`#admin_phonebook_${data.id} .iconAcitveFB`).removeClass("active");
         });
     }
     chooseAdmin(admin){
@@ -67,24 +57,6 @@ export class Phonebook implements OnInit {
             let seen = data.room.seen;
             $("#admin_phonebook_"+seen.agent+" .messageNotSeen").css("display","block");
             $("#admin_phonebook_"+seen.agent+" .messageNotSeen").html(seen.num);
-        });
-    }
-    NODE_listRoom(){
-        this.socket.on("listRoom",(data)=>{
-        let interval = setInterval(()=>{
-            if(this.listAdmin.length == $(`.phonebook`).length){
-            let arrRoom = data;
-            this.listAdmin.forEach((e)=>{
-                let room = this.sv.changeRoom(this.user.id+"_"+e.id);
-                if(!this.sv.empty(arrRoom[room])){
-                let seen = arrRoom[room].seen;
-                $("#admin_phonebook_"+seen.agent+" .messageNotSeen").css("display","block");
-                $("#admin_phonebook_"+seen.agent+" .messageNotSeen").html(seen.num);
-                }        
-            })
-            clearInterval(interval)
-            }
-        },1000);
         });
     }
     NODE_hasSeen(){

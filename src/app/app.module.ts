@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule,ReactiveFormsModule  }   from '@angular/forms';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular/index';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -24,15 +24,15 @@ import { VerifyService } from './service/verify.service';
 import { AdminService } from './service/admin.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { ShareService } from './service/share.service';
-
+import { RoomService } from './service/room.service';
 export function cookieServiceFactory() {
   return new CookieService();
 }
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage,
     HomePage,
+    TabsPage,
     ProfilePage,
     ChatPage,
     LoginPage,
@@ -51,8 +51,8 @@ export function cookieServiceFactory() {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TabsPage,
     HomePage,
+    TabsPage,
     ProfilePage,
     ChatPage,
     LoginPage,
@@ -61,12 +61,13 @@ export function cookieServiceFactory() {
   ],
   providers: [
     StatusBar,
+    CookieService,
     SplashScreen,
     HttpService,
-    CookieService,
     AdminService,
     VerifyService,
     ShareService,
+    RoomService,
     { provide: CookieService, useFactory: cookieServiceFactory },
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

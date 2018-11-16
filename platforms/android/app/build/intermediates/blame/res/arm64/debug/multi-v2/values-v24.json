@@ -4,7 +4,7 @@
             "outputFile": "C:\\xampp\\htdocs\\phone\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeArm64DebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\617b95f79056eb071b0a1d5ec8055ac7\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\c5176c75f6346d6656f838051c7ac9a5\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

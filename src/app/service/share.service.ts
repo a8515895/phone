@@ -29,4 +29,8 @@ export class ShareService {
         if(data == null || data == '') return true;
         else return false;
     }
+    charLimit(str,limit = 20){
+        if(str.length > limit) return str = str.substring(0,10)+" ...";
+        else return str;
+    }
 }

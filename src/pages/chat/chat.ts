@@ -1,11 +1,11 @@
 import { Component,ElementRef,Renderer2,ViewChild,OnInit } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController,NavParams} from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Socket } from 'ng-socket-io';
 import { ShareService } from '../../app/service/share.service';
+import { RoomService } from '../../app/service/room.service';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import {DomSanitizer} from '@angular/platform-browser';
 import BASE_URL from '../../app/BASE_URL';
 
 import $ from 'jquery';
@@ -23,16 +23,26 @@ export class ChatPage implements OnInit{
     room : any;
     message : any = [];
     base64Image : any;
-    constructor(private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private cs :CookieService,private socket: Socket,private _DomSanitizationService: DomSanitizer) {
-        this.user = this.cs.getObject("user")['original'];
+    constructor(private rs : RoomService,private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private cs :CookieService,private socket: Socket) {
+        let cookie = this.cs.getObject("user");
+        this.user = cookie['original'];
         this.room = this.sv.changeRoom(this.navParam.get("room"));
         this.NODE_socketOnMessage();        
-        this.socket.on("getHistory",(data)=>{
-            this.message = data;
-        })
     }
     ngOnInit(){
-        this.socket.emit("getHistory",{room : this.room});
+        this.getHistory();
+    }
+    ngAfterViewInit(){
+        $('#list-content-chat').animate({
+            scrollTop: $('#list-content-chat').get(0).scrollHeight
+        }, 1000);
+    }
+    getHistory(){
+        this.rs.getMessageInRoom({room : this.room}).then(
+            res => {
+                this.message = res;
+            }
+        )
     }
     sendMessage(mess){
         let admin_receive = this.room.split("_")[0] == this.user.id ? this.room.split("_")[1] : this.room.split("_")[0];
@@ -41,10 +51,12 @@ export class ChatPage implements OnInit{
             this.socket.emit("sendMessage",{type : 'img',room : this.room,user : this.user,data : this.base64Image,admin_send : this.user.id,admin_receive : admin_receive});
             this.base64Image = "";
             $(".prepareSendImage").removeClass("active");
+            this.rs.addMessage({type : "img",room : this.room,admin_send : this.user.id,admin_receive : admin_receive,message : this.base64Image});
         }
         if(!this.sv.empty(mess.value)){
             this.addAdminCloneMessage({last_message : mess.value,type : "text",room : this.room,id : this.user.id,admin_send : this.user.id,admin_receive : admin_receive})
             this.socket.emit("sendMessage",{room : this.room,user : this.user,data : mess.value,admin_send : this.user.id,admin_receive : admin_receive});
+            this.rs.addMessage({type : "text",room : this.room,admin_send : this.user.id,admin_receive : admin_receive,message : mess.value});
             mess.value="";
         }
     }
@@ -95,6 +107,9 @@ export class ChatPage implements OnInit{
             if(data.room.name == this.sv.changeRoom(this.room)){
                 this.createNewMessage(data.data);
             }
+            $('#list-content-chat').animate({
+                scrollTop: $('#list-content-chat').get(0).scrollHeight
+            }, 1000);
         });
     }
     hasSeen(){

@@ -8,7 +8,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="9577e4d746c6bad3ad1a3e82ec6af29fca0268cf">
+        sha1="1843c36364abc18bc6c625e65225b401cf0bdd16">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\14.jar" />
     </item>
     <item
@@ -18,38 +18,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fdadb7b61bb98e4ec37ec5f5643bb6b8f78b5188">
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\x86\release\13.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\4.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="29540c4fd32c5743f764d18c86d0c8309a3f087b">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\x86_64\release\15.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="3111bbaf1cff93e882196058895ecd1f89c45b97">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\x86_64\release\9.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="b3425fda3d89a401555582541a265b6d334db525">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\9.jar" />
+        sha1="9a1c96347d9fde842194883575da5462a27fcce3">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\4.jar" />
     </item>
     <item
         is-multidex="false"
@@ -58,7 +38,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fb787c18185d09295444bb1311f00ec9dddbd540">
+        sha1="9ee4f1ac740c27ba678d9a76f1dc4a8f0d498dca">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\10.jar" />
     </item>
     <item
@@ -68,7 +48,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6b8b0c7ae62bfae224ca2bcc9ba5b63bbf0fa984">
+        sha1="75eede2a42246e34bc4a42c40707e4ec166ff91b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\5.jar" />
     </item>
     <item
@@ -78,7 +58,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5c0c565083de14ba4ebad62ce9ce4e48fededa5d">
+        sha1="71d1915e5c8acedf90c066ee64ade42d623d6d8e">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\2.jar" />
     </item>
     <item
@@ -88,7 +68,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="2cf792ebd55e79281254ade2c1f681ef9b2e1a51">
+        sha1="b8799785a62103372b2debda29c33d2e25d01c66">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\11.jar" />
     </item>
     <item
@@ -98,7 +78,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5c0c565083de14ba4ebad62ce9ce4e48fededa5d">
+        sha1="71d1915e5c8acedf90c066ee64ade42d623d6d8e">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\2.jar" />
     </item>
     <item
@@ -108,7 +88,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="9577e4d746c6bad3ad1a3e82ec6af29fca0268cf">
+        sha1="1843c36364abc18bc6c625e65225b401cf0bdd16">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\14.jar" />
     </item>
     <item
@@ -118,7 +98,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="9577e4d746c6bad3ad1a3e82ec6af29fca0268cf">
+        sha1="1843c36364abc18bc6c625e65225b401cf0bdd16">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\14.jar" />
     </item>
     <item
@@ -128,7 +108,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="7f133783c2585f537d4360f8a52555a7d87ea796">
+        sha1="faa16adc19ffd47c0e68d159ea079d5b37104f99">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\7.jar" />
     </item>
     <item
@@ -138,7 +118,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6593be5621fbe3ab4fa57a9e0ca78d4909d687a9">
+        sha1="e8750237c59ac5513826cb4e63bbc27b1d6e914b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\8.jar" />
     </item>
     <item
@@ -148,18 +128,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6f0753c0b94863b96fb25c12e89314a740249d5a">
+        sha1="9a1c96347d9fde842194883575da5462a27fcce3">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\arm64\release\9.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\10.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="b3425fda3d89a401555582541a265b6d334db525">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\9.jar" />
+        sha1="9ee4f1ac740c27ba678d9a76f1dc4a8f0d498dca">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\10.jar" />
     </item>
     <item
         is-multidex="false"
@@ -168,18 +148,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="7f133783c2585f537d4360f8a52555a7d87ea796">
+        sha1="faa16adc19ffd47c0e68d159ea079d5b37104f99">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\armeabi\release\15.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\14.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="3111bbaf1cff93e882196058895ecd1f89c45b97">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\15.jar" />
+        sha1="1843c36364abc18bc6c625e65225b401cf0bdd16">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\14.jar" />
     </item>
     <item
         is-multidex="false"
@@ -188,7 +168,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5aef7a2c1e71e219d4ae20e8335543d8c5fd51dc">
+        sha1="8652981b42930bb7a72e98dd6ee9dce193c79bdb">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\6.jar" />
     </item>
     <item
@@ -198,18 +178,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="9577e4d746c6bad3ad1a3e82ec6af29fca0268cf">
+        sha1="1843c36364abc18bc6c625e65225b401cf0bdd16">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\14.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\armv7\release\9.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\0.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="b3425fda3d89a401555582541a265b6d334db525">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\9.jar" />
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\1.jar" />
     </item>
     <item
         is-multidex="false"
@@ -218,7 +198,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5c0c565083de14ba4ebad62ce9ce4e48fededa5d">
+        sha1="71d1915e5c8acedf90c066ee64ade42d623d6d8e">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\2.jar" />
     </item>
     <item
@@ -228,18 +208,8 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fb787c18185d09295444bb1311f00ec9dddbd540">
+        sha1="9ee4f1ac740c27ba678d9a76f1dc4a8f0d498dca">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\10.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\armv7\release\15.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="3111bbaf1cff93e882196058895ecd1f89c45b97">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\15.jar" />
     </item>
     <item
         is-multidex="false"
@@ -248,7 +218,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5c0c565083de14ba4ebad62ce9ce4e48fededa5d">
+        sha1="71d1915e5c8acedf90c066ee64ade42d623d6d8e">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\2.jar" />
     </item>
     <item
@@ -258,18 +228,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6f0753c0b94863b96fb25c12e89314a740249d5a">
+        sha1="9a1c96347d9fde842194883575da5462a27fcce3">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\armeabi\release\13.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\11.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="29540c4fd32c5743f764d18c86d0c8309a3f087b">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\13.jar" />
+        sha1="b8799785a62103372b2debda29c33d2e25d01c66">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\11.jar" />
     </item>
     <item
         is-multidex="false"
@@ -278,7 +248,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6f0753c0b94863b96fb25c12e89314a740249d5a">
+        sha1="9a1c96347d9fde842194883575da5462a27fcce3">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\4.jar" />
     </item>
     <item
@@ -288,8 +258,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6593be5621fbe3ab4fa57a9e0ca78d4909d687a9">
+        sha1="e8750237c59ac5513826cb4e63bbc27b1d6e914b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\5.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.3"
+        sha1="75eede2a42246e34bc4a42c40707e4ec166ff91b">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -298,18 +278,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="2cf792ebd55e79281254ade2c1f681ef9b2e1a51">
+        sha1="b8799785a62103372b2debda29c33d2e25d01c66">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\11.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\x86\release\15.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\9.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="3111bbaf1cff93e882196058895ecd1f89c45b97">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\15.jar" />
+        sha1="b3425fda3d89a401555582541a265b6d334db525">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\9.jar" />
     </item>
     <item
         is-multidex="false"
@@ -318,7 +298,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fdadb7b61bb98e4ec37ec5f5643bb6b8f78b5188">
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\1.jar" />
     </item>
     <item
@@ -328,7 +308,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5c0c565083de14ba4ebad62ce9ce4e48fededa5d">
+        sha1="71d1915e5c8acedf90c066ee64ade42d623d6d8e">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\2.jar" />
     </item>
     <item
@@ -338,8 +318,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fff4f0153a3896ca2402ea0395a848c1f7068fb3">
+        sha1="4645f4c117243f634df2c612d531b87f86cdc239">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\2.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.3"
+        sha1="71d1915e5c8acedf90c066ee64ade42d623d6d8e">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -348,18 +338,8 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fdadb7b61bb98e4ec37ec5f5643bb6b8f78b5188">
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\x86\release\9.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="b3425fda3d89a401555582541a265b6d334db525">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\9.jar" />
     </item>
     <item
         is-multidex="false"
@@ -368,7 +348,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6593be5621fbe3ab4fa57a9e0ca78d4909d687a9">
+        sha1="e8750237c59ac5513826cb4e63bbc27b1d6e914b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\8.jar" />
     </item>
     <item
@@ -378,8 +358,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6b8b0c7ae62bfae224ca2bcc9ba5b63bbf0fa984">
+        sha1="75eede2a42246e34bc4a42c40707e4ec166ff91b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\7.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.3"
+        sha1="faa16adc19ffd47c0e68d159ea079d5b37104f99">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -388,7 +378,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5aef7a2c1e71e219d4ae20e8335543d8c5fd51dc">
+        sha1="8652981b42930bb7a72e98dd6ee9dce193c79bdb">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\6.jar" />
     </item>
     <item
@@ -398,7 +388,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fb787c18185d09295444bb1311f00ec9dddbd540">
+        sha1="9ee4f1ac740c27ba678d9a76f1dc4a8f0d498dca">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\10.jar" />
     </item>
     <item
@@ -408,8 +398,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5aef7a2c1e71e219d4ae20e8335543d8c5fd51dc">
+        sha1="8652981b42930bb7a72e98dd6ee9dce193c79bdb">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\13.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.3"
+        sha1="29540c4fd32c5743f764d18c86d0c8309a3f087b">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\13.jar" />
     </item>
     <item
         is-multidex="false"
@@ -418,7 +418,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fb787c18185d09295444bb1311f00ec9dddbd540">
+        sha1="9ee4f1ac740c27ba678d9a76f1dc4a8f0d498dca">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\10.jar" />
     </item>
     <item
@@ -428,7 +428,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="7f133783c2585f537d4360f8a52555a7d87ea796">
+        sha1="faa16adc19ffd47c0e68d159ea079d5b37104f99">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\7.jar" />
     </item>
     <item
@@ -438,7 +438,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6593be5621fbe3ab4fa57a9e0ca78d4909d687a9">
+        sha1="e8750237c59ac5513826cb4e63bbc27b1d6e914b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\8.jar" />
     </item>
     <item
@@ -448,7 +448,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fff4f0153a3896ca2402ea0395a848c1f7068fb3">
+        sha1="4645f4c117243f634df2c612d531b87f86cdc239">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\12.jar" />
     </item>
     <item
@@ -458,7 +458,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="2cf792ebd55e79281254ade2c1f681ef9b2e1a51">
+        sha1="b8799785a62103372b2debda29c33d2e25d01c66">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\11.jar" />
     </item>
     <item
@@ -468,7 +468,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="2cf792ebd55e79281254ade2c1f681ef9b2e1a51">
+        sha1="b8799785a62103372b2debda29c33d2e25d01c66">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\11.jar" />
     </item>
     <item
@@ -478,8 +478,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="2cf792ebd55e79281254ade2c1f681ef9b2e1a51">
+        sha1="b8799785a62103372b2debda29c33d2e25d01c66">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\15.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.3"
+        sha1="3111bbaf1cff93e882196058895ecd1f89c45b97">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\15.jar" />
     </item>
     <item
         is-multidex="false"
@@ -488,7 +498,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fff4f0153a3896ca2402ea0395a848c1f7068fb3">
+        sha1="4645f4c117243f634df2c612d531b87f86cdc239">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\12.jar" />
     </item>
     <item
@@ -498,28 +508,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5aef7a2c1e71e219d4ae20e8335543d8c5fd51dc">
+        sha1="8652981b42930bb7a72e98dd6ee9dce193c79bdb">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\6.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\arm64\release\15.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\8.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="3111bbaf1cff93e882196058895ecd1f89c45b97">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\armv7\release\13.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="29540c4fd32c5743f764d18c86d0c8309a3f087b">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\13.jar" />
+        sha1="e8750237c59ac5513826cb4e63bbc27b1d6e914b">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -528,18 +528,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6593be5621fbe3ab4fa57a9e0ca78d4909d687a9">
+        sha1="e8750237c59ac5513826cb4e63bbc27b1d6e914b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\armeabi\release\9.jar"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\6.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="b3425fda3d89a401555582541a265b6d334db525">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\9.jar" />
+        sha1="8652981b42930bb7a72e98dd6ee9dce193c79bdb">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -548,7 +548,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6b8b0c7ae62bfae224ca2bcc9ba5b63bbf0fa984">
+        sha1="75eede2a42246e34bc4a42c40707e4ec166ff91b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\5.jar" />
     </item>
     <item
@@ -558,7 +558,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6b8b0c7ae62bfae224ca2bcc9ba5b63bbf0fa984">
+        sha1="75eede2a42246e34bc4a42c40707e4ec166ff91b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\5.jar" />
     </item>
     <item
@@ -568,7 +568,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fff4f0153a3896ca2402ea0395a848c1f7068fb3">
+        sha1="4645f4c117243f634df2c612d531b87f86cdc239">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\12.jar" />
     </item>
     <item
@@ -578,7 +578,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fff4f0153a3896ca2402ea0395a848c1f7068fb3">
+        sha1="4645f4c117243f634df2c612d531b87f86cdc239">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\12.jar" />
     </item>
     <item
@@ -588,7 +588,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="7f133783c2585f537d4360f8a52555a7d87ea796">
+        sha1="faa16adc19ffd47c0e68d159ea079d5b37104f99">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\7.jar" />
     </item>
     <item
@@ -598,7 +598,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="5aef7a2c1e71e219d4ae20e8335543d8c5fd51dc">
+        sha1="8652981b42930bb7a72e98dd6ee9dce193c79bdb">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\6.jar" />
     </item>
     <item
@@ -608,7 +608,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6f0753c0b94863b96fb25c12e89314a740249d5a">
+        sha1="9a1c96347d9fde842194883575da5462a27fcce3">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\4.jar" />
     </item>
     <item
@@ -618,7 +618,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="9577e4d746c6bad3ad1a3e82ec6af29fca0268cf">
+        sha1="1843c36364abc18bc6c625e65225b401cf0bdd16">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\14.jar" />
     </item>
     <item
@@ -628,7 +628,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fdadb7b61bb98e4ec37ec5f5643bb6b8f78b5188">
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\1.jar" />
     </item>
     <item
@@ -638,7 +638,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6f0753c0b94863b96fb25c12e89314a740249d5a">
+        sha1="9a1c96347d9fde842194883575da5462a27fcce3">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\4.jar" />
     </item>
     <item
@@ -648,28 +648,8 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="6b8b0c7ae62bfae224ca2bcc9ba5b63bbf0fa984">
+        sha1="75eede2a42246e34bc4a42c40707e4ec166ff91b">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armv7\release\5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\x86_64\release\13.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="29540c4fd32c5743f764d18c86d0c8309a3f087b">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86_64\release\13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\arm64\release\13.jar"
-        jumboMode="false"
-        min-sdk-version="19"
-        optimize="true"
-        revision="28.0.3"
-        sha1="29540c4fd32c5743f764d18c86d0c8309a3f087b">
-        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\13.jar" />
     </item>
     <item
         is-multidex="false"
@@ -678,8 +658,18 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fb787c18185d09295444bb1311f00ec9dddbd540">
+        sha1="9ee4f1ac740c27ba678d9a76f1dc4a8f0d498dca">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\x86\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\desugar\release\12.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="28.0.3"
+        sha1="4645f4c117243f634df2c612d531b87f86cdc239">
+        <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\release\12.jar" />
     </item>
     <item
         is-multidex="false"
@@ -688,7 +678,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="7f133783c2585f537d4360f8a52555a7d87ea796">
+        sha1="faa16adc19ffd47c0e68d159ea079d5b37104f99">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\arm64\release\7.jar" />
     </item>
     <item
@@ -698,7 +688,7 @@
         min-sdk-version="19"
         optimize="true"
         revision="28.0.3"
-        sha1="fdadb7b61bb98e4ec37ec5f5643bb6b8f78b5188">
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
         <dex dex="C:\xampp\htdocs\phone\platforms\android\app\build\intermediates\transforms\preDex\armeabi\release\1.jar" />
     </item>
 

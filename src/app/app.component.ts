@@ -1,5 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform } from 'ionic-angular/index';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
@@ -7,7 +7,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tab/tab'; 
 import { Socket } from 'ng-socket-io';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
-import { NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular/index';
 import { ShareService } from '../app/service/share.service';
 import BASE_URL from '../app/BASE_URL';
 @Component({
@@ -25,19 +25,15 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       this.checkCookie();
-
     });
   }
-  checkCookie(){    
+  checkCookie(){   
     if(this.cookieService.getObject('user') == null || this.cookieService.getObject('user') == ''){
       this.rootPage = LoginPage
     }else{
+      console.log(this.cookieService.getObject('user'))
       this.user = this.cookieService.getObject("user")['original'];
       this.rootPage = TabsPage;
-      this.socket.on("login",()=>{
-        console.log("Đã nghe được yêu cầu cung cấp thông tin")
-        this.socket.emit("login",this.user);
-      });
     }
     return this.nav.setRoot(this.rootPage);
   }

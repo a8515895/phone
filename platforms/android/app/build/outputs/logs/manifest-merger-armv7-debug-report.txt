@@ -15,18 +15,18 @@ ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-20:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-20:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-20:12
-MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\6d74b9c10b0155937f1a90830f64180e\AndroidManifest.xml:1:1-9:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\5aed485cde5675bd853ced488b3dfcaa\AndroidManifest.xml:17:1-22:12
+MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\a0fe9b5ef9d7fe5ad506ab808362a819\AndroidManifest.xml:1:1-9:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\0cf724fbcb54ff6d2094c634ac6e94b3\AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] C:\xampp\htdocs\phone\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\617b95f79056eb071b0a1d5ec8055ac7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9effa6555e0657e7810ba008425a31c7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\a4e298533cca5deacd4d0d1a129a9b56\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\401e99055e6aaf099b611403d7e8ab9d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4ccf8ccb0031d4e2edec9fdfb528e2f1\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a7c17718b6f0634c9eceb5ce73d591fb\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\8c08968cd5b5ff8b3d4c75081232c356\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\0ef72337315e8fc38dff185bc44c2ac1\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8dea09f7ebb5ffb1cc49c3f08d63cc3c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\c5176c75f6346d6656f838051c7ac9a5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\ab1d9a8b16b078884810cbc217788143\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\6b2750cc2a8c1703a3cd2a94f31316b3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\c448d202e00f88fa5ffdaa1e4d6dda39\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\a265a62857d7321bb49816d2e272ade2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\37f71c026258c24f7aa25eeeed2697a5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\11b302788d1de39a0c475e62b6e39ddf\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b30edc272dd54317f83a09e0e3839869\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\fc918b678e7950fcc4ea5ecea100ff65\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-20:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-20:12
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:2:1-20:12
@@ -103,30 +103,30 @@ ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.
 uses-sdk
 ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
-MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\6d74b9c10b0155937f1a90830f64180e\AndroidManifest.xml:6:5-8:41
-MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\6d74b9c10b0155937f1a90830f64180e\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\5aed485cde5675bd853ced488b3dfcaa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\5aed485cde5675bd853ced488b3dfcaa\AndroidManifest.xml:20:5-44
+MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\a0fe9b5ef9d7fe5ad506ab808362a819\AndroidManifest.xml:6:5-8:41
+MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\a0fe9b5ef9d7fe5ad506ab808362a819\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\0cf724fbcb54ff6d2094c634ac6e94b3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\0cf724fbcb54ff6d2094c634ac6e94b3\AndroidManifest.xml:20:5-44
 MERGED from [:CordovaLib] C:\xampp\htdocs\phone\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] C:\xampp\htdocs\phone\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\617b95f79056eb071b0a1d5ec8055ac7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\617b95f79056eb071b0a1d5ec8055ac7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9effa6555e0657e7810ba008425a31c7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\9effa6555e0657e7810ba008425a31c7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\a4e298533cca5deacd4d0d1a129a9b56\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\a4e298533cca5deacd4d0d1a129a9b56\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\401e99055e6aaf099b611403d7e8ab9d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\401e99055e6aaf099b611403d7e8ab9d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4ccf8ccb0031d4e2edec9fdfb528e2f1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4ccf8ccb0031d4e2edec9fdfb528e2f1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a7c17718b6f0634c9eceb5ce73d591fb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a7c17718b6f0634c9eceb5ce73d591fb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\8c08968cd5b5ff8b3d4c75081232c356\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\8c08968cd5b5ff8b3d4c75081232c356\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\0ef72337315e8fc38dff185bc44c2ac1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\0ef72337315e8fc38dff185bc44c2ac1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8dea09f7ebb5ffb1cc49c3f08d63cc3c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\8dea09f7ebb5ffb1cc49c3f08d63cc3c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\c5176c75f6346d6656f838051c7ac9a5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\c5176c75f6346d6656f838051c7ac9a5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\ab1d9a8b16b078884810cbc217788143\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\ab1d9a8b16b078884810cbc217788143\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\6b2750cc2a8c1703a3cd2a94f31316b3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\6b2750cc2a8c1703a3cd2a94f31316b3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\c448d202e00f88fa5ffdaa1e4d6dda39\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\c448d202e00f88fa5ffdaa1e4d6dda39\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\a265a62857d7321bb49816d2e272ade2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\a265a62857d7321bb49816d2e272ade2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\37f71c026258c24f7aa25eeeed2697a5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\37f71c026258c24f7aa25eeeed2697a5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\11b302788d1de39a0c475e62b6e39ddf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\11b302788d1de39a0c475e62b6e39ddf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b30edc272dd54317f83a09e0e3839869\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\b30edc272dd54317f83a09e0e3839869\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\fc918b678e7950fcc4ea5ecea100ff65\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anh Khoa\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\fc918b678e7950fcc4ea5ecea100ff65\AndroidManifest.xml:20:5-44
 INJECTED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
 	android:targetSdkVersion
 		ADDED from C:\xampp\htdocs\phone\platforms\android\app\src\main\AndroidManifest.xml:16:42-71

@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,ToastController,LoadingController } from 'ionic-angular/index';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { VerifyService } from '../../app/service/verify.service';
-import { ToastController } from 'ionic-angular';
 import { TabsPage } from '../tab/tab';
-import { LoadingController } from 'ionic-angular';
 import { Socket } from 'ng-socket-io';
-import { ShareService } from '../../app/service/share.service'
 
 @Component({
     selector: 'page-login',
@@ -18,40 +15,37 @@ export class LoginPage {
         password : '',
     }
     disable : boolean = false;
-    toastSuccess : any;
     toastFail : any;
     loader : any;
-    constructor(public loadingCtrl: LoadingController,private sv: ShareService,public socket : Socket,public navCtrl: NavController,private toastCtrl: ToastController,private _sv : VerifyService,private cookieService: CookieService,) {
+    constructor(public loadingCtrl: LoadingController,public socket : Socket,public navCtrl: NavController,private toastCtrl: ToastController,private _sv : VerifyService,private cookieService: CookieService,) {
         if(this.cookieService.get("isLogin") != "" &&  this.cookieService.get("isLogin") != null){
             this.navCtrl.setRoot(TabsPage);
         }
+    }
+    onSubmit(){ 
         this.loader = this.loadingCtrl.create({
             content: "Please wait...",
             duration: 3000
-        });
-        this.toastSuccess = this.toastCtrl.create({
-            message: 'Đăng nhập thành công',
-            duration: 3000,
-            position: 'bottom'
         });
         this.toastFail = this.toastCtrl.create({
             message: 'Đăng nhập thất bại',
             duration: 3000,
             position: 'bottom'
-        });
-    }
-    onSubmit(){        
+        });       
         this.disable = true;
         this.loader.present();
         this._sv.login(this.model).then(
             res => {  
                 this.disable = false;
+                console.log("Đang test nek");
+                console.log("test",res.user.original);
+                console.log("test2",res.access_token);
                 if(res.status){
-                    this.sv.addNewUser(res.user.original);
+                    this.socket.emit("login",res.user.original)
                     this.cookieService.putObject('user',res.user);
-                    this.cookieService.put('isLogin',res.access_token);   
-                    this.cookieService.put('level',res.level);   
-                    this.toastSuccess.present();
+                    this.cookieService.put('isLogin',res.access_token);  
+                    console.log("test header2",this.cookieService.get('isLogin')); 
+                    this.cookieService.put('level',res.level);  
                     this.navCtrl.setRoot(TabsPage);
                     return;
                 }

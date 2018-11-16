@@ -4,24 +4,7 @@
             "outputFile": "C:\\xampp\\htdocs\\phone\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86_64DebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-lv\\android_content_strings.xml",
-                    "from": {
-                        "startLines": "2,4,3,8,6,7,5,9,13,12,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "110,225,160,598,373,502,295,655,1016,908,721,792",
-                        "endColumns": "49,69,64,56,128,95,77,65,77,107,70,115",
-                        "endOffsets": "159,294,224,654,501,597,372,720,1093,1015,791,907"
-                    },
-                    "to": {
-                        "startLines": "12,13,14,39,40,41,42,43,47,48,49,50",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "777,831,905,2697,2758,2891,2991,3073,3426,3508,3620,3695",
-                        "endColumns": "53,73,68,60,132,99,81,69,81,111,74,119",
-                        "endOffsets": "826,900,969,2753,2886,2986,3068,3138,3503,3615,3690,3810"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\4ccf8ccb0031d4e2edec9fdfb528e2f1\\res\\values-lv\\values-lv.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a265a62857d7321bb49816d2e272ade2\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-lv\\android_ui_strings.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-lv\\android_content_strings.xml",
+                    "from": {
+                        "startLines": "2,4,3,8,6,7,5,9,13,12,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "110,225,160,598,373,502,295,655,1016,908,721,792",
+                        "endColumns": "49,69,64,56,128,95,77,65,77,107,70,115",
+                        "endOffsets": "159,294,224,654,501,597,372,720,1093,1015,791,907"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,39,40,41,42,43,47,48,49,50",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "777,831,905,2697,2758,2891,2991,3073,3426,3508,3620,3695",
+                        "endColumns": "53,73,68,60,132,99,81,69,81,111,74,119",
+                        "endOffsets": "826,900,969,2753,2886,2986,3068,3138,3503,3615,3690,3810"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-lv\\android_ui_strings.xml",
                     "from": {
                         "startLines": "20,24,21,38,39,33,29,32,30,31,45,43,17,13,9,12,14,15,4,11,8,18,16,10,5,6,7,19,42,40,22,41,37,2,23,3,44,26,34,35,27,36,28,46,25",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

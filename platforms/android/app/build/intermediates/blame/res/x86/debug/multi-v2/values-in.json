@@ -4,24 +4,7 @@
             "outputFile": "C:\\xampp\\htdocs\\phone\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86DebugResources\\merged.dir\\values-in\\values-in.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\4ccf8ccb0031d4e2edec9fdfb528e2f1\\res\\values-in\\values-in.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "51",
-                        "startColumns": "4",
-                        "startOffsets": "3683",
-                        "endColumns": "100",
-                        "endOffsets": "3779"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-in\\android_ui_strings.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-in\\android_ui_strings.xml",
                     "from": {
                         "startLines": "20,24,21,38,39,33,29,32,30,31,45,43,17,13,9,12,14,15,4,11,8,18,16,10,5,6,7,19,42,40,22,41,37,2,23,3,44,26,34,35,27,36,28,46,25",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-in\\android_content_strings.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a265a62857d7321bb49816d2e272ade2\\res\\values-in\\values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "51",
+                        "startColumns": "4",
+                        "startOffsets": "3683",
+                        "endColumns": "100",
+                        "endOffsets": "3779"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-in\\android_content_strings.xml",
                     "from": {
                         "startLines": "2,4,3,8,6,7,5,9,13,12,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0",

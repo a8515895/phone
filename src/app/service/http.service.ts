@@ -1,16 +1,14 @@
 import { Injectable,ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular/index';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx'
 import { CookieService } from 'angular2-cookie/services/cookies.service';
-import { _throw } from 'rxjs/observable/throw';
 import BASE_URL from '../BASE_URL';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 // declare var $ :JQuery;
 import $ from 'jquery';
-import { Socket } from 'ng-socket-io';
 
 @Injectable()
 export class HttpService {
@@ -19,11 +17,12 @@ export class HttpService {
     token : any;
     baseUrl : string = BASE_URL+'api/';
     @ViewChild('mycontent') nav : NavController;
-    constructor(private socket : Socket,private http: Http,private cookieService: CookieService) {
+    constructor(private http: Http,private cookieService: CookieService) {
 
     }
     public get(url,body=null){
         url=this.baseUrl+url;
+        console.log("test header",this.cookieService.get('isLogin'));
         this.headers = new Headers({
             'Content-Type':  'application/json',
             'Authorization': 'bearer '+this.cookieService.get('isLogin'),

@@ -4,24 +4,7 @@
             "outputFile": "C:\\xampp\\htdocs\\phone\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86DebugResources\\merged.dir\\values-it\\values-it.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-it\\android_content_strings.xml",
-                    "from": {
-                        "startLines": "2,4,3,8,6,7,5,9,13,12,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "110,224,162,648,379,546,296,703,1055,935,774,840",
-                        "endColumns": "51,71,61,54,166,101,82,70,75,119,65,94",
-                        "endOffsets": "161,295,223,702,545,647,378,773,1130,1054,839,934"
-                    },
-                    "to": {
-                        "startLines": "12,13,14,39,40,41,42,43,47,48,49,50",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "746,802,878,2655,2714,2885,2991,3078,3428,3508,3632,3702",
-                        "endColumns": "55,75,65,58,170,105,86,74,79,123,69,98",
-                        "endOffsets": "797,873,939,2709,2880,2986,3073,3148,3503,3627,3697,3796"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\4ccf8ccb0031d4e2edec9fdfb528e2f1\\res\\values-it\\values-it.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a265a62857d7321bb49816d2e272ade2\\res\\values-it\\values-it.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-it\\android_ui_strings.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-it\\android_ui_strings.xml",
                     "from": {
                         "startLines": "20,24,21,38,39,33,29,32,30,31,45,43,17,13,9,12,14,15,4,11,8,18,16,10,5,6,7,19,42,40,22,41,37,2,23,3,44,26,34,35,27,36,28,46,25",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "55,122,193,259,329,398,465,530,605,675,944,1047,1159,1220,1279,1344,1405,1467,1533,1592,1652,1714,1777,1841,1914,1970,2036,2092,2190,2254,2328,2389,2457,2536,3153,3222,3302,3902,3957,4030,4105,4160,4238,4305,4378",
                         "endColumns": "66,70,65,69,68,66,64,74,69,70,102,111,60,58,64,60,61,65,58,59,61,62,63,72,55,65,55,97,63,73,60,67,78,118,68,79,125,54,72,74,54,77,66,72,72",
                         "endOffsets": "117,188,254,324,393,460,525,600,670,741,1042,1154,1215,1274,1339,1400,1462,1528,1587,1647,1709,1772,1836,1909,1965,2031,2087,2185,2249,2323,2384,2452,2531,2650,3217,3297,3423,3952,4025,4100,4155,4233,4300,4373,4446"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-it\\android_content_strings.xml",
+                    "from": {
+                        "startLines": "2,4,3,8,6,7,5,9,13,12,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "110,224,162,648,379,546,296,703,1055,935,774,840",
+                        "endColumns": "51,71,61,54,166,101,82,70,75,119,65,94",
+                        "endOffsets": "161,295,223,702,545,647,378,773,1130,1054,839,934"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,39,40,41,42,43,47,48,49,50",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "746,802,878,2655,2714,2885,2991,3078,3428,3508,3632,3702",
+                        "endColumns": "55,75,65,58,170,105,86,74,79,123,69,98",
+                        "endOffsets": "797,873,939,2709,2880,2986,3073,3148,3503,3627,3697,3796"
                     }
                 }
             ]

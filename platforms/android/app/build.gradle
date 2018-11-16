@@ -22,14 +22,14 @@ apply plugin: 'com.android.application'
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
         maven {
             url "https://maven.google.com"
         }
-        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.0.0'
     }
 }
 
@@ -91,8 +91,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-crosswalk-webview/starter-xwalk.gradle"
 apply from: "../cordova-android-support-gradle-release/starter-cordova-android-support-gradle-release.gradle"
+apply from: "../cordova-plugin-crosswalk-webview/starter-xwalk.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

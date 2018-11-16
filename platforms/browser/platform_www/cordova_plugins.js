@@ -297,8 +297,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
-    "cordova-plugin-crosswalk-webview": "2.4.0",
-    "cordova-android-support-gradle-release": "1.4.5"
+    "cordova-android-support-gradle-release": "1.4.5",
+    "cordova-plugin-crosswalk-webview": "2.4.0"
 }
 // BOTTOM OF METADATA
 });

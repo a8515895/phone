@@ -31,10 +31,10 @@
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-crosswalk-webview": {
+    "cordova-android-support-gradle-release": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-android-support-gradle-release": {
+    "cordova-plugin-crosswalk-webview": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },

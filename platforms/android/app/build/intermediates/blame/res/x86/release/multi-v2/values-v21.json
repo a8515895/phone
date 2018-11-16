@@ -4,45 +4,7 @@
             "outputFile": "C:\\xampp\\htdocs\\phone\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86ReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-v21\\styles_03.xml",
-                    "from": {
-                        "startLines": "6,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "251,458",
-                        "endLines": "9,12",
-                        "endColumns": "12,12",
-                        "endOffsets": "453,612"
-                    },
-                    "to": {
-                        "startLines": "6,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "354,561",
-                        "endLines": "9,12",
-                        "endColumns": "12,12",
-                        "endOffsets": "556,715"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\6d74b9c10b0155937f1a90830f64180e\\res\\values-v21\\styles.xml",
-                    "from": {
-                        "startLines": "6,9",
-                        "startColumns": "4,4",
-                        "startOffsets": "224,357",
-                        "endLines": "8,11",
-                        "endColumns": "12,12",
-                        "endOffsets": "352,493"
-                    },
-                    "to": {
-                        "startLines": "13,16",
-                        "startColumns": "4,4",
-                        "startOffsets": "720,853",
-                        "endLines": "15,18",
-                        "endColumns": "12,12",
-                        "endOffsets": "848,989"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\617b95f79056eb071b0a1d5ec8055ac7\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\c5176c75f6346d6656f838051c7ac9a5\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -61,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\4ccf8ccb0031d4e2edec9fdfb528e2f1\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a265a62857d7321bb49816d2e272ade2\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -77,6 +39,44 @@
                         "endLines": "2,3,4,5,19,20,27,31,37,42",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
                         "endOffsets": "154,218,285,349,1105,1231,1688,1984,2323,2661"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-v21\\styles_03.xml",
+                    "from": {
+                        "startLines": "6,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "251,458",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "453,612"
+                    },
+                    "to": {
+                        "startLines": "6,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "354,561",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "556,715"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anh Khoa\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\a0fe9b5ef9d7fe5ad506ab808362a819\\res\\values-v21\\styles.xml",
+                    "from": {
+                        "startLines": "6,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "224,357",
+                        "endLines": "8,11",
+                        "endColumns": "12,12",
+                        "endOffsets": "352,493"
+                    },
+                    "to": {
+                        "startLines": "13,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "720,853",
+                        "endLines": "15,18",
+                        "endColumns": "12,12",
+                        "endOffsets": "848,989"
                     }
                 }
             ]
