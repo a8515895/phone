@@ -1,7 +1,6 @@
 import { Component,OnInit,Renderer2,ViewChild,ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Socket } from 'ng-socket-io';
 import { LoginPage } from '../../pages/login/login';
 import { ChatPage } from '../chat/chat'; 
@@ -19,14 +18,15 @@ export class HomePage implements OnInit {
   listAdmin : Array<any> = [];
   audio : any;  
   isShowNoMessage : boolean = false;
-  constructor(public navCtrl: NavController,private render : Renderer2,private sv : ShareService,public ad : AdminService,private cs :CookieService,private socket: Socket) {
-    let cookie = this.cs.getObject("user");
-    this.user = {name : "khoa",avartar : "khoa.png",email : "a8515895@gmail.com",id : 1};
-    if(this.sv.empty(this.cs.getObject("user"))){
+  constructor(public navCtrl: NavController,private render : Renderer2,private sv : ShareService,public ad : AdminService,private socket: Socket) {
+    console.log("PAGE HOMNE");
+    console.log(localStorage.getItem("user"));
+    this.user = localStorage.getItem("user");
+    if(this.sv.empty(localStorage.getItem("user"))){
       this.navCtrl.setRoot(LoginPage);
     }else{
       this.socket.on("login",()=>{
-        this.socket.emit("login",this.cs.getObject("user"));
+        this.socket.emit("login",localStorage.getItem("user"));
       });
     }    
     
@@ -42,7 +42,7 @@ export class HomePage implements OnInit {
     this.ad.getAdminCloneMessage({id : this.user.id}).then(
       res => {
         if(!this.sv.empty(res.error)){
-          this.cs.removeAll();
+          localStorage.clear();
           return this.navCtrl.setRoot(LoginPage);
         }else{
           if(res.length == 0) this.isShowNoMessage = true;

@@ -1,7 +1,6 @@
 import { Component,ElementRef,Renderer2,ViewChild,OnInit } from '@angular/core';
 import { NavController,NavParams} from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Socket } from 'ng-socket-io';
 import { ShareService } from '../../app/service/share.service';
 import { RoomService } from '../../app/service/room.service';
@@ -23,9 +22,8 @@ export class ChatPage implements OnInit{
     room : any;
     message : any = [];
     base64Image : any;
-    constructor(private rs : RoomService,private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private cs :CookieService,private socket: Socket) {
-        let cookie = this.cs.getObject("user");
-        this.user = cookie['original'];
+    constructor(private rs : RoomService,private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private socket: Socket) {
+        this.user = localStorage.getItem("user");
         this.room = this.sv.changeRoom(this.navParam.get("room"));
         this.NODE_socketOnMessage();        
     }
@@ -96,7 +94,6 @@ export class ChatPage implements OnInit{
         }   
         this.render.appendChild(this.ul.nativeElement,item);  
         this.render.listen(item,"click",()=>{
-            // this.socket.emit("is_seen",{status : true,room : e.name,email : this.cookie.getObject('user')['original']['email']});
         });
     }
     addAdminCloneMessage(data){

@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Socket } from 'ng-socket-io';
 import { ChatPage } from '../chat/chat'; 
 import BASE_URL from '../../app/BASE_URL';
@@ -15,9 +14,8 @@ export class Phonebook implements OnInit {
     BASE_URL =BASE_URL;
     listAdmin : any;
     audio : any;
-    constructor(public navCtrl: NavController,public ad : AdminService,private cs :CookieService,private socket: Socket) {
-        let cookie = this.cs.getObject("user");
-        this.user = cookie['original'];
+    constructor(public navCtrl: NavController,public ad : AdminService,private socket: Socket) {
+        this.user = localStorage.getItem("user");
         this.socket.emit("listAdmin");
         this.getListAdminChat();     
         this.NODE_userlogout();

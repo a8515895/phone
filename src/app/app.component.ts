@@ -6,7 +6,6 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile'; 
 import { TabsPage } from '../pages/tab/tab'; 
 import { Socket } from 'ng-socket-io';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { NavController } from 'ionic-angular/index';
 import { ShareService } from '../app/service/share.service';
 import BASE_URL from '../app/BASE_URL';
@@ -20,7 +19,7 @@ export class MyApp {
     avartar : 'user.avartar',
   };
   @ViewChild('mycontent') nav : NavController;
-  constructor(platform: Platform,private sv : ShareService, statusBar: StatusBar, splashScreen: SplashScreen,private socket: Socket,private cookieService: CookieService) {
+  constructor(platform: Platform,private sv : ShareService, statusBar: StatusBar, splashScreen: SplashScreen,private socket: Socket) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
@@ -28,11 +27,10 @@ export class MyApp {
     });
   }
   checkCookie(){   
-    if(this.cookieService.getObject('user') == null || this.cookieService.getObject('user') == ''){
+    if(localStorage.getItem('user') == null || localStorage.getItem('user') == ''){
       this.rootPage = LoginPage
     }else{
-      console.log(this.cookieService.getObject('user'))
-      this.user = this.cookieService.getObject("user")['original'];
+      this.user = localStorage.getItem("user");
       this.rootPage = TabsPage;
     }
     return this.nav.setRoot(this.rootPage);
@@ -42,9 +40,8 @@ export class MyApp {
       case "profile":
         return this.nav.push(ProfilePage);
       case "logout":
-        this.socket.emit("adminLogout",this.cookieService.getObject("user")['original']);
-        this.sv.removeUser(this.cookieService.getObject("user")['original']);
-        this.cookieService.removeAll();
+        this.socket.emit("adminLogout",this.user);
+        localStorage.clear();
         return this.nav.setRoot(LoginPage);
     }  
   }

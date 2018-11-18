@@ -22,12 +22,9 @@ import { TabsPage } from '../pages/tab/tab';
 import { HttpService } from './service/http.service';
 import { VerifyService } from './service/verify.service';
 import { AdminService } from './service/admin.service';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+
 import { ShareService } from './service/share.service';
 import { RoomService } from './service/room.service';
-export function cookieServiceFactory() {
-  return new CookieService();
-}
 @NgModule({
   declarations: [
     MyApp,
@@ -61,14 +58,12 @@ export function cookieServiceFactory() {
   ],
   providers: [
     StatusBar,
-    CookieService,
     SplashScreen,
     HttpService,
     AdminService,
     VerifyService,
     ShareService,
     RoomService,
-    { provide: CookieService, useFactory: cookieServiceFactory },
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
