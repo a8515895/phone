@@ -27,8 +27,14 @@ export class AdminService {
     addAdmin(data){
         return this._http.post('addAdmin',data);
     }
+    registerAdmin(data){
+        return this._http.post('registerAdmin',data);
+    }
     deleteAdmin(data){
         return this._http.delete('deleteAdmin',data);
+    }
+    deleteAdminCloneMessage(data){
+        return this._http.delete('deleteAdminCloneMessage',data);
     }
     updateAdmin(data){
         return this._http.put('updateAdmin',data);

@@ -1,14 +1,12 @@
 import { Component,ElementRef,Renderer2,ViewChild,OnInit } from '@angular/core';
-import { NavController,NavParams} from 'ionic-angular/index';
+import { NavController,NavParams,Content} from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
 import { Socket } from 'ng-socket-io';
 import { ShareService } from '../../app/service/share.service';
 import { RoomService } from '../../app/service/room.service';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import BASE_URL from '../../app/BASE_URL';
-
 import $ from 'jquery';
-
 @Component({
     selector: 'page-chat',
     templateUrl: 'chat.html',
@@ -16,14 +14,16 @@ import $ from 'jquery';
 })
 export class ChatPage implements OnInit{
     @ViewChild('list') ul : ElementRef;
+    @ViewChild('content') content: Content;
     BASE_URL = BASE_URL;
     user : any;
     input : ElementRef;
     room : any;
     message : any = [];
     base64Image : any;
+    private lastScrollTop: number = 0;
     constructor(private rs : RoomService,private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private socket: Socket) {
-        this.user = localStorage.getItem("user");
+        this.user = JSON.parse(localStorage.getItem("user"));
         this.room = this.sv.changeRoom(this.navParam.get("room"));
         this.NODE_socketOnMessage();        
     }
@@ -31,14 +31,21 @@ export class ChatPage implements OnInit{
         this.getHistory();
     }
     ngAfterViewInit(){
-        $('#list-content-chat').animate({
-            scrollTop: $('#list-content-chat').get(0).scrollHeight
-        }, 1000);
+        setTimeout(()=>{
+            this.content.scrollToBottom(500);
+        },1000)
+        this.content.ionScrollEnd.subscribe(res=>{
+            if(!this.sv.empty(res)){
+                if(res.scrollTop == 0){
+                    
+                }
+            }
+        })
     }
     getHistory(){
-        this.rs.getMessageInRoom({room : this.room}).then(
+        this.rs.getMessageInRoom({room : this.room,limit : [0,10]}).then(
             res => {
-                this.message = res;
+                this.message = res;                
             }
         )
     }
@@ -92,9 +99,10 @@ export class ChatPage implements OnInit{
                 <div style="clear : both"></div>
             `; 
         }   
-        this.render.appendChild(this.ul.nativeElement,item);  
-        this.render.listen(item,"click",()=>{
-        });
+        
+        this.render.appendChild(this.ul.nativeElement.lastElementChild,item);  
+        this.content.scrollToBottom(500);
+
     }
     addAdminCloneMessage(data){
         this.ad.addAdminCloneMessage(data);
@@ -104,9 +112,6 @@ export class ChatPage implements OnInit{
             if(data.room.name == this.sv.changeRoom(this.room)){
                 this.createNewMessage(data.data);
             }
-            $('#list-content-chat').animate({
-                scrollTop: $('#list-content-chat').get(0).scrollHeight
-            }, 1000);
         });
     }
     hasSeen(){

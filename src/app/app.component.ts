@@ -7,7 +7,6 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tab/tab'; 
 import { Socket } from 'ng-socket-io';
 import { NavController } from 'ionic-angular/index';
-import { ShareService } from '../app/service/share.service';
 import BASE_URL from '../app/BASE_URL';
 @Component({
   templateUrl: 'app.html'
@@ -19,7 +18,7 @@ export class MyApp {
     avartar : 'user.avartar',
   };
   @ViewChild('mycontent') nav : NavController;
-  constructor(platform: Platform,private sv : ShareService, statusBar: StatusBar, splashScreen: SplashScreen,private socket: Socket) {
+  constructor(platform: Platform,statusBar: StatusBar, splashScreen: SplashScreen,private socket: Socket) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
@@ -30,7 +29,7 @@ export class MyApp {
     if(localStorage.getItem('user') == null || localStorage.getItem('user') == ''){
       this.rootPage = LoginPage
     }else{
-      this.user = localStorage.getItem("user");
+      this.user = JSON.parse(localStorage.getItem("user"));
       this.rootPage = TabsPage;
     }
     return this.nav.setRoot(this.rootPage);

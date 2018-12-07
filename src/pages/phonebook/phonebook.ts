@@ -15,7 +15,7 @@ export class Phonebook implements OnInit {
     listAdmin : any;
     audio : any;
     constructor(public navCtrl: NavController,public ad : AdminService,private socket: Socket) {
-        this.user = localStorage.getItem("user");
+        this.user = JSON.parse(localStorage.getItem("user"));
         this.socket.emit("listAdmin");
         this.getListAdminChat();     
         this.NODE_userlogout();
@@ -51,7 +51,7 @@ export class Phonebook implements OnInit {
     }
     NODE_socketOnMessage(){
         this.socket.on("sendMessage",(data)=>{
-            if(data.data.user.id != this.user.id) this.audio.play();        
+            // if(data.data.user.id != this.user.id) this.audio.play();        
             let seen = data.room.seen;
             $("#admin_phonebook_"+seen.agent+" .messageNotSeen").css("display","block");
             $("#admin_phonebook_"+seen.agent+" .messageNotSeen").html(seen.num);

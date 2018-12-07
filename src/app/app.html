@@ -1,9 +1,9 @@
 <ion-menu [content]="mycontent">
-    <ion-header>
-        <ion-toolbar class="main-background">
+    <ion-header class="main-background">
+        <ion-toolbar >
             <ion-title >
                 <div style="width : 100%" class="avarta">
-                    <img style="height : 30px;width : 30px;border-radius : 100%" src="{{BASE_URL}}public/img/avartar/no-avartar.png">
+                    <img style="height : 30px;width : 30px;border-radius : 100%" [src]="user.avartar == null ? BASE_URL+'public/img/avartar/no-avartar.png' : BASE_URL+'public/img/avartar/'+user.avartar ">
                     <span style="display : inline-block;float : right;">{{user.name == null ? 'Không xác định' : user.name}}</span>
                 </div>
             </ion-title>

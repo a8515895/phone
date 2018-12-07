@@ -11,7 +11,7 @@ export class Diary implements OnInit {
     user : any;
     BASE_URL = BASE_URL;
     constructor(public navCtrl: NavController,public ad : AdminService,private socket: Socket) {
-        this.user = localStorage.getItem("user");
+        this.user = JSON.parse(localStorage.getItem("user"));
         this.socket.emit("listAdmin");
     }
     ngOnInit(){

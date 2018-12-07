@@ -3,9 +3,12 @@ import { NavController } from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
 import { Socket } from 'ng-socket-io';
 import { LoginPage } from '../../pages/login/login';
-import { ChatPage } from '../chat/chat'; 
+import { HomeMessageClone } from '../../custom-page/home-message-clone/homeMessageClone'; 
 import BASE_URL from '../../app/BASE_URL';
-import { ShareService } from '../../app/service/share.service'
+import { ShareService } from '../../app/service/share.service';
+import { PopoverController } from 'ionic-angular';
+import { DomService } from'../../app/service/dom.service'  
+
 import $ from 'jquery';
 @Component({
   selector: 'page-home',
@@ -18,24 +21,24 @@ export class HomePage implements OnInit {
   listAdmin : Array<any> = [];
   audio : any;  
   isShowNoMessage : boolean = false;
-  constructor(public navCtrl: NavController,private render : Renderer2,private sv : ShareService,public ad : AdminService,private socket: Socket) {
-    console.log("PAGE HOMNE");
-    console.log(localStorage.getItem("user"));
-    this.user = localStorage.getItem("user");
-    if(this.sv.empty(localStorage.getItem("user"))){
+  @ViewChild('nav') navCtrl: NavController
+  constructor(private domService: DomService,public popoverCtrl: PopoverController,private render : Renderer2,private sv : ShareService,public ad : AdminService,private socket: Socket) {
+    this.user = JSON.parse(localStorage.getItem("user"));
+    if(this.sv.empty(this.user)){
       this.navCtrl.setRoot(LoginPage);
+      console.log("Đã lại đây");
     }else{
       this.socket.on("login",()=>{
-        this.socket.emit("login",localStorage.getItem("user"));
+        this.socket.emit("login",this.user);
       });
-    }    
-    
+    }
     this.NODE_userlogout();
     this.NODE_socketOnMessage();
     this.NODE_hasSeen();
   } 
   ngOnInit(){
     // this.audio = new Audio("../../assets/mess2.mp3");
+
     this.getAdminCloneMessage();    
   }
   getAdminCloneMessage(){
@@ -70,16 +73,11 @@ export class HomePage implements OnInit {
       $("#target_"+data.id+" .iconAcitveFB").removeClass("active");
     });
   }
-  chooseAdmin(admin){
-    if(admin.id != this.user.id){
-      $("#room_"+admin.room+" .last_message").removeClass("b");
-      this.socket.emit("joinRoom",{room : admin.room,target : admin.id});
-      return this.navCtrl.push(ChatPage,{room : admin.room});
-    }    
-  }
   NODE_socketOnMessage(){
     this.socket.on("sendMessage",(data)=>{
       let id = data.room.id1 == this.user.id ? data.room.id2 : data.room.id1;
+      console.log($("#target_"+id));
+      console.log($("#target_"+id).length);
       if($("#target_"+id).length == 0){
         this.ad.getDetailAdmin({id : id}).then(
           res =>{
@@ -109,29 +107,7 @@ export class HomePage implements OnInit {
   }
   createNewMessage(data){
     this.isShowNoMessage = false;
-    let item = document.createElement("ion-item");
-    item.className="admin chat-home item item-block item-md";
-    item.id = data.room.id1 == this.user.id ? "target_"+data.room.id2 : "target_"+data.room.id1;
-    item.innerHTML =
-      `
-        <ion-avatar item-start="" style="position : relative">
-            <img src="${BASE_URL+'public/img/avartar/'}${this.sv.empty(data.data.user.avartar) ? 'no-avartar.png' : data.data.user.avartar}">
-            <span class="pull-right messageNotSeen" style="display : none">0</span>
-            <span class="pull-right iconAcitveFB active"></span>
-        </ion-avatar>
-        <div class="item-inner">
-          <div class="input-wrapper">
-            <ion-label class="label label-md">
-              <h2>${data.data.user.name}</h2>
-              <p class="last_message b">${data.data.type != 'img' ? this.sv.charLimit(data.data.data) : 'Bạn nhận được hình ảnh'}</p>
-            </ion-label>
-          </div>
-        </div>
-        <div class="button-effect"></div>
-      `; 
-    this.render.appendChild(this.ul.nativeElement,item);  
-    this.render.listen(item,"click",()=>{
-      this.chooseAdmin(data.user);
-    });
+    data.data.user['last_message'] = data.data.data;
+    this.domService.appendComponentToBody(HomeMessageClone,this.ul.nativeElement,data.data.user);
   }
 }

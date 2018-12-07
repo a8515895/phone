@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController,ToastController,LoadingController } from 'ionic-angular/index';
+import { Component,ViewChild } from '@angular/core';
+import { NavController,ToastController,LoadingController,App,ViewController } from 'ionic-angular/index';
 import { VerifyService } from '../../app/service/verify.service';
+import { Register } from '../register/register'
 import { TabsPage } from '../tab/tab';
 import { Socket } from 'ng-socket-io';
 @Component({
@@ -32,13 +33,18 @@ export class LoginPage {
         });       
         this.disable = true;
         this.loader.present();
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(this.model.username.match(re)){
+            this.model['type'] = 'email';
+            this.model['email'] = this.model['username'];
+        }
+        else this.model['type'] = 'username';
         this._sv.login(this.model).then(
             res => {  
                 this.disable = false;                
                 if(res.status){
                     this.socket.emit("login",res.user.original)
-                    localStorage.setItem('user',res.user.original);  
-                    console.log("Test app",localStorage.getItem("user"));                  
+                    localStorage.setItem('user',JSON.stringify(res.user.original));  
                     localStorage.setItem("isLogin",res.access_token); 
                     localStorage.setItem('level',res.level);  
                     this.navCtrl.setRoot(TabsPage);
@@ -51,5 +57,9 @@ export class LoginPage {
                 console.log(err);
             }
         )
+    }
+    pushPage(){
+        // alert('test');
+        return this.navCtrl.push(Register);
     }
 }

@@ -1,0 +1,16 @@
+<ion-row>
+    <ion-col col-10 (click)="chooseAdmin(admin.target)">
+        <ion-item class="admin chat-home" id="target_{{admin.target}}" >
+        <ion-avatar item-start style="position : relative">
+            <img src="{{BASE_URL+'public/img/avartar/'}}{{admin.avartar == null ? 'no-avartar.png' : admin.avartar}}">
+            <span class="pull-right messageNotSeen" [ngClass]="{'active': admin.seen != 0 && user.id == admin.admin_receive_id ? true : false}">{{admin.seen}}</span>
+            <span class="pull-right iconAcitveFB" [ngClass]="{'active': admin.is_login == 1 ? true : false}"></span>
+        </ion-avatar>
+        <h2>{{admin.name}}</h2>
+        <p class="last_message">{{admin.last_message}}</p>
+        </ion-item>
+    </ion-col>
+    <ion-col col-2 style="text-align: center;line-height: 5" (click)="presentPopover($event,{room : admin.room,target : admin.target})">          
+        <ion-icon name="more"></ion-icon>
+    </ion-col>
+</ion-row>

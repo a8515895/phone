@@ -7,22 +7,26 @@
     </ion-navbar>
 </ion-header>
 <ion-content style="height : 100%;width : 100%;background: #d4d4d478">
-    <div id="list-content-chat" style="height : calc(100% - 25px);width : 100%;overflow-y: auto;" #list>
-        <div class="message {{i.id == user.id ? 'reply' : 'receive'}}" *ngFor="let i of message">
-            <div class="avarta">
-                <img style="border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{i.avartar == null ? 'no-avartar.png' : i.avartar}}">
-            </div>
-            <div class="content">
-                <span *ngIf="i.type == null || i.type == 'text'" style="word-wrap: normal">
-                    {{i.message}}
-                </span>
-                <div *ngIf="i.type == 'img'" style="max-width : 100px;max-height : 100px;overflow : hidden">
-                    <img [src]="i.message" width='100%' />
+    <ion-content id="list-content-chat" style="height : calc(100% - 25px);width : 100%" #content >
+        <div #list>
+            <div class="message-present">
+                <div class="message {{i.id == user.id ? 'reply' : 'receive'}}" *ngFor="let i of message">
+                    <div class="avarta">
+                        <img style="border-radius : 100%" src="{{BASE_URL}}public/img/avartar/{{i.avartar == null ? 'no-avartar.png' : i.avartar}}">
+                    </div>
+                    <div class="content">
+                        <span *ngIf="i.type == null || i.type == 'text'" style="word-wrap: normal">
+                            {{i.message}}
+                        </span>
+                        <div *ngIf="i.type == 'img'" style="max-width : 100px;max-height : 100px;overflow : hidden">
+                            <img [src]="i.message" width='100%' />
+                        </div>
+                    </div>
+                    <div style="clear : both"></div>
                 </div>
             </div>
-            <div style="clear : both"></div>
         </div>
-    </div>
+    </ion-content>
     <div style="height : 25px;width : 100%;position: relative;">
         <div class="prepareSendImage">
             <div style="height: 60px;width: 60px;padding: 10px;position : relative">

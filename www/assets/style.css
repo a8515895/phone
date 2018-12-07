@@ -4,6 +4,12 @@
 .b{
     font-weight : bold;
 }
+.main-color{
+    color : #941ba5
+}
+.main-background{
+    background : #941ba5
+}
 .message .content{
     padding : 10px; 
     padding : 5px;
@@ -60,13 +66,16 @@
     width: 12px; 
     height: 12px; 
     margin-left: 4px; 
-    display: inline-block;
+    display: none;
     line-height: 1.3;
     background: #e85757;
     font-size: 9px;
     font-weight: bold;
     color : #ffffff;
     text-align: center;
+}
+.messageNotSeen.active{
+    display: inline-block;
 }
 .iconAcitveFB.active{
     display: block;
@@ -83,4 +92,10 @@
 }
 .prepareSendImage.active{
     display: block;
+}
+/* #list-content-chat>.fixed-content{
+    margin-bottom: 0 !important;
+}*/
+#list-content-chat>.scroll-content{
+    margin-bottom: 0 !important;
 }

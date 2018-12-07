@@ -20,8 +20,7 @@ export class HttpService {
 
     }
     public get(url,body=null){
-        url=this.baseUrl+url;
-        console.log("test header",localStorage.getItem('isLogin'));
+        url=this.baseUrl+url;        
         this.headers = new Headers({
             'Content-Type':  'application/json',
             'Authorization': 'bearer '+localStorage.getItem('isLogin'),
@@ -42,7 +41,7 @@ export class HttpService {
         url=this.baseUrl+url;
         this.headers = new Headers({
             'Content-Type':  'application/json',
-            'Authorization': 'bearer '+('isLogin'),
+            'Authorization': 'bearer '+localStorage.getItem('isLogin'),
         });
         this.options = new RequestOptions({ headers: this.headers });
         return this.http.post(url,body,this.options)

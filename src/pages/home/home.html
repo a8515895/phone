@@ -12,17 +12,11 @@
   </ion-navbar>
 </ion-header>
 <ion-content  style="height : 100%;width : 100%">  
-  <ion-list #list>
-    <ion-item class="admin chat-home" id="target_{{admin.target}}" *ngFor="let admin of listAdmin" (click)="chooseAdmin(admin)">
-      <ion-avatar item-start style="position : relative">
-          <img src="{{BASE_URL+'public/img/avartar/'}}{{admin.avartar == null ? 'no-avartar.png' : admin.avartar}}">
-          <span style="display : none" class="pull-right messageNotSeen">0</span>
-          <span class="pull-right iconAcitveFB" [ngClass]="{'active': admin.is_login == 1 ? true : false}"></span>
-      </ion-avatar>
-      <h2>{{admin.name}}</h2>
-      <p class="last_message">{{admin.last_message}}</p>
-    </ion-item>
-    <h3 class="admin" *ngIf="isShowNoMessage" style="color: #ccc;text-align: center">KHÔNG CÓ TIN NHẮN NÀO</h3>
-  </ion-list>
+  <ion-grid>
+    <ion-list #list>
+      <page-homeMessageClone [admin]="admin" *ngFor="let admin of listAdmin"></page-homeMessageClone>
+      <h3 class="admin" *ngIf="isShowNoMessage" style="color: #ccc;text-align: center">KHÔNG CÓ TIN NHẮN NÀO</h3>
+    </ion-list>
+  </ion-grid>
 </ion-content>
   
