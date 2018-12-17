@@ -22,15 +22,19 @@ export class HomeMessageClone implements OnInit{
         this.user = JSON.parse(localStorage.getItem("user"));
     }
     ngOnInit(){
-        console.log(this.admin);
     }
     presentPopover(myEvent,data){
-        let popover = this.popoverCtrl.create(PopoverPage,{room : data.room,target : data.target});
+        let popover = this.popoverCtrl.create(PopoverPage,{room : data.room,target : data.target,jid : data.jid});
         popover.present({
             ev: myEvent
         });
         popover.onDidDismiss(data => {
-            console.log("Đã tắt POP");
+            if(!this.sv.empty(data)){
+                if(data.type=="delete"){
+                    data['id'] = this.user.id;
+                    this.socket.emit("removeRoom",data);
+                }
+            }
         })
     }
     chooseAdmin(admin){

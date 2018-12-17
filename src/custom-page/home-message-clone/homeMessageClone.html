@@ -10,7 +10,7 @@
         <p class="last_message">{{admin.last_message}}</p>
         </ion-item>
     </ion-col>
-    <ion-col col-2 style="text-align: center;line-height: 5" (click)="presentPopover($event,{room : admin.room,target : admin.target})">          
+    <ion-col col-2 style="text-align: center;line-height: 5" (click)="presentPopover($event,{room : admin.room,target : admin.target,jid : 'target_'+admin.target})">          
         <ion-icon name="more"></ion-icon>
     </ion-col>
 </ion-row>

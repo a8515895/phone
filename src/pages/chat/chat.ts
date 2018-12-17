@@ -1,5 +1,5 @@
 import { Component,ElementRef,Renderer2,ViewChild,OnInit } from '@angular/core';
-import { NavController,NavParams,Content} from 'ionic-angular/index';
+import { NavParams,Content} from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
 import { Socket } from 'ng-socket-io';
 import { ShareService } from '../../app/service/share.service';
@@ -22,7 +22,7 @@ export class ChatPage implements OnInit{
     message : any = [];
     base64Image : any;
     private lastScrollTop: number = 0;
-    constructor(private rs : RoomService,private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public navCtrl: NavController,public ad : AdminService,private socket: Socket) {
+    constructor(private rs : RoomService,private camera: Camera,public navParam : NavParams,public sv : ShareService,public render : Renderer2,public ad : AdminService,private socket: Socket) {
         this.user = JSON.parse(localStorage.getItem("user"));
         this.room = this.sv.changeRoom(this.navParam.get("room"));
         this.NODE_socketOnMessage();        

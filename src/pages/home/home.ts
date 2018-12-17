@@ -1,4 +1,4 @@
-import { Component,OnInit,Renderer2,ViewChild,ElementRef } from '@angular/core';
+import { Component,OnInit,ViewChild,ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular/index';
 import { AdminService } from '../../app/service/admin.service';
 import { Socket } from 'ng-socket-io';
@@ -8,7 +8,6 @@ import BASE_URL from '../../app/BASE_URL';
 import { ShareService } from '../../app/service/share.service';
 import { PopoverController } from 'ionic-angular';
 import { DomService } from'../../app/service/dom.service'  
-
 import $ from 'jquery';
 @Component({
   selector: 'page-home',
@@ -21,12 +20,11 @@ export class HomePage implements OnInit {
   listAdmin : Array<any> = [];
   audio : any;  
   isShowNoMessage : boolean = false;
-  @ViewChild('nav') navCtrl: NavController
-  constructor(private domService: DomService,public popoverCtrl: PopoverController,private render : Renderer2,private sv : ShareService,public ad : AdminService,private socket: Socket) {
+  // @ViewChild('nav') navCtrl: NavController
+  constructor(private domService: DomService,public navCtrl: NavController,public popoverCtrl: PopoverController,private sv : ShareService,public ad : AdminService,private socket: Socket) {
     this.user = JSON.parse(localStorage.getItem("user"));
     if(this.sv.empty(this.user)){
       this.navCtrl.setRoot(LoginPage);
-      console.log("Đã lại đây");
     }else{
       this.socket.on("login",()=>{
         this.socket.emit("login",this.user);
@@ -35,10 +33,10 @@ export class HomePage implements OnInit {
     this.NODE_userlogout();
     this.NODE_socketOnMessage();
     this.NODE_hasSeen();
+    this.NODE_removeRoom();
   } 
   ngOnInit(){
     // this.audio = new Audio("../../assets/mess2.mp3");
-
     this.getAdminCloneMessage();    
   }
   getAdminCloneMessage(){
@@ -76,8 +74,6 @@ export class HomePage implements OnInit {
   NODE_socketOnMessage(){
     this.socket.on("sendMessage",(data)=>{
       let id = data.room.id1 == this.user.id ? data.room.id2 : data.room.id1;
-      console.log($("#target_"+id));
-      console.log($("#target_"+id).length);
       if($("#target_"+id).length == 0){
         this.ad.getDetailAdmin({id : id}).then(
           res =>{
@@ -88,11 +84,13 @@ export class HomePage implements OnInit {
         )
       }else{
         let it = $("#target_"+id+" .last_message");
+        console.log(data);
         if(this.user.id != data.data.user.id){
           if(!it.hasClass("b")) it.addClass("b");
           it.html(data.data.type != 'img' ? this.sv.charLimit(data.data.data) : 'Bạn nhận được hình ảnh');
         }else{
           it.removeClass("b");
+          
         }
       }
     });
@@ -105,6 +103,15 @@ export class HomePage implements OnInit {
       }
     });
   }
+  NODE_removeRoom(){
+    this.socket.on("removeRoom",(data)=>{
+      $("#"+data.jid).parents("page-homeMessageClone").remove();
+      if($("page-homeMessageClone").length == 0){
+        this.isShowNoMessage = true;
+      }
+    })
+  }
+
   createNewMessage(data){
     this.isShowNoMessage = false;
     data.data.user['last_message'] = data.data.data;
